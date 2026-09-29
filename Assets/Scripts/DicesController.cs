@@ -703,15 +703,21 @@ public class DicesController : MonoBehaviour
     /// </summary>
     public void HideDices()
     {
-        if (dice1 != null)
+        bool wasActive = false;
+        if (dice1 != null && dice1.activeSelf)
         {
             dice1.SetActive(false);
+            wasActive = true;
         }
-        if (dice2 != null)
+        if (dice2 != null && dice2.activeSelf)
         {
             dice2.SetActive(false);
+            wasActive = true;
         }
-        Debug.Log("[DicesController] Dice hidden - panel is active");
+        if (wasActive)
+        {
+            Debug.Log("[DicesController] Dice hidden - panel is active");
+        }
     }
     
     /// <summary>
@@ -719,16 +725,29 @@ public class DicesController : MonoBehaviour
     /// </summary>
     public void ShowDices()
     {
-        if (dice1 != null)
+        bool wasInactive = false;
+        if (dice1 != null && !dice1.activeSelf)
         {
             dice1.SetActive(true);
+            wasInactive = true;
         }
-        if (dice2 != null)
+        if (dice2 != null && !dice2.activeSelf)
         {
             dice2.SetActive(true);
+            wasInactive = true;
         }
-        Debug.Log("[DicesController] Dice visible - gameplay active");
+        if (wasInactive)
+        {
+            Debug.Log("[DicesController] Dice visible - gameplay active");
+        }
     }
+
+    public bool AreDicesActive()
+    {
+        return (dice1 != null && dice1.activeSelf) || (dice2 != null && dice2.activeSelf);
+    }
+    
+
     
     #endregion
 }

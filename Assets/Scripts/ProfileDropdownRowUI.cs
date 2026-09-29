@@ -16,6 +16,9 @@ namespace UI
 
         [Tooltip("Image component for player avatar")]
         [SerializeField] private Image avatarImage;
+        
+        [Tooltip("Image component for the profile frame")]
+        [SerializeField] private Image frameImage;
 
         [Tooltip("TextMeshProUGUI component for player name")]
         [SerializeField] private TextMeshProUGUI usernameText;
@@ -26,7 +29,7 @@ namespace UI
         /// <summary>
         /// Populates row UI with given profile data including optional rank
         /// </summary>
-        public void SetData(string username, int score, Sprite avatar = null, int rank = 0)
+        public void SetData(string username, int score, Sprite avatar = null, int rank = 0, int frameIndex = -1)
         {
             if (rankText != null)
             {
@@ -47,6 +50,33 @@ namespace UI
             if (avatarImage != null && avatar != null)
             {
                 avatarImage.sprite = avatar;
+            }
+            
+            // Handle Frame
+            if (frameIndex == -1)
+            {
+                frameIndex = int.TryParse(PlayerModel.ProfileFrame, out int parsedFrame)
+                    ? parsedFrame
+                    : PlayerPrefs.GetInt("SelectedProfileFrameIndex", 0);
+            }
+            
+            if (frameImage != null && AvatarSelector.Instance != null)
+            {
+                Sprite fSprite = AvatarSelector.Instance.GetBackgroundSpriteByIndex(frameIndex);
+                if (fSprite != null)
+                {
+                    frameImage.sprite = fSprite;
+                    frameImage.gameObject.SetActive(true);
+                }
+                else
+                {
+                    frameImage.gameObject.SetActive(false);
+                }
+            }
+            else if (avatarImage != null && frameImage == null)
+            {
+                // Fallback to dynamic overlay if frameImage reference is missing but avatar is present
+                UIProfileHelper.ApplyFrameToImage(avatarImage, frameIndex);
             }
         }
     }

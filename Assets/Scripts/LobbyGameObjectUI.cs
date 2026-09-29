@@ -126,7 +126,16 @@ public class LobbyGameObjectUI : EnhancedScrollerCellView, IPointerEnterHandler,
         // Setup texts from LobbyModel
         if (data != null)
         {
-            LobbyConfig config = LobbyModel.GetConfig(data.lobbyIndex);
+            LobbyConfig config = null;
+            if (HorizontalLobbyManager.Instance != null)
+            {
+                config = HorizontalLobbyManager.Instance.GetLobbyConfig(data.lobbyIndex);
+            }
+            if (config == null)
+            {
+                config = LobbyModel.GetBoardConfig(data.lobbyIndex, 5) ?? LobbyModel.GetConfig(data.lobbyIndex);
+            }
+
             if (config != null)
             {
                 if (entryFeeText != null)

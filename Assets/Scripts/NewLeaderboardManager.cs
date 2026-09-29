@@ -410,7 +410,7 @@ public class NewLeaderboardManager : MonoBehaviour
     {
         if (BackendAuthService.Instance != null && BackendAuthService.HasStoredJWT())
         {
-            BackendAuthService.Instance.GetLeaderboard(LeaderboardEntryLimit, (success, response) =>
+            BackendAuthService.Instance.GetLeaderboard(LeaderboardEntryLimit, "all_time", "earnings", (success, response) =>
             {
                 if (success && response != null && response.leaderboard != null && response.leaderboard.Count > 0)
                 {
@@ -730,16 +730,22 @@ public class NewLeaderboardManager : MonoBehaviour
                     LeaderboardCategoryRowUI rowUI = rowObj.gameObject.AddComponent<LeaderboardCategoryRowUI>();
                     
                     // Auto-map Name
-                    Transform nameT = rowObj.Find("NameText");
+                    Transform nameT = FindChildRecursive(rowObj, "NameText");
+                    if (nameT == null) nameT = FindChildRecursive(rowObj, "PlayerName");
+                    if (nameT == null) nameT = FindChildRecursive(rowObj, "Name");
+                    
                     if (nameT != null)
                     {
                         rowUI.nameText = nameT.GetComponent<TextMeshProUGUI>();
                         if (rowUI.nameText == null) rowUI.nameTextLegacy = nameT.GetComponent<Text>();
                     }
 
-                    // Auto-map Score (IdText (1) or IdText)
-                    Transform scoreT = rowObj.Find("IdText (1)");
-                    if (scoreT == null) scoreT = rowObj.Find("IdText");
+                    // Auto-map Score
+                    Transform scoreT = FindChildRecursive(rowObj, "IdText (1)");
+                    if (scoreT == null) scoreT = FindChildRecursive(rowObj, "IdText");
+                    if (scoreT == null) scoreT = FindChildRecursive(rowObj, "ScoreText");
+                    if (scoreT == null) scoreT = FindChildRecursive(rowObj, "Score");
+                    
                     if (scoreT != null)
                     {
                         rowUI.scoreText = scoreT.GetComponent<TextMeshProUGUI>();
@@ -747,7 +753,10 @@ public class NewLeaderboardManager : MonoBehaviour
                     }
 
                     // Auto-map Avatar (Profile)
-                    Transform profileT = rowObj.Find("Profile");
+                    Transform profileT = FindChildRecursive(rowObj, "Profile");
+                    if (profileT == null) profileT = FindChildRecursive(rowObj, "Avatar");
+                    if (profileT == null) profileT = FindChildRecursive(rowObj, "AvatarImage");
+                    
                     if (profileT != null)
                     {
                         rowUI.avatarImage = profileT.GetComponent<Image>();

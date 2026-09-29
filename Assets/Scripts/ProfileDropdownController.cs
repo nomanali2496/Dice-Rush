@@ -99,23 +99,29 @@ namespace UI
 
         private void Start()
         {
-            if (fetchFromBackendOnStart && BackendAuthService.Instance != null && BackendAuthService.HasStoredJWT())
+            // Auto-setup Layout Group to fix any overlapping issues from the inspector
+            if (itemsContainer != null)
             {
-                FetchBackendProfiles();
-            }
-            else
-            {
-                // Fallback to sample data if offline
-                if (sampleProfiles != null && sampleProfiles.Count > 0)
-                {
-                    SetProfiles(sampleProfiles);
-                }
+                var vlg = itemsContainer.GetComponent<UnityEngine.UI.VerticalLayoutGroup>();
+                if (vlg == null) vlg = itemsContainer.gameObject.AddComponent<UnityEngine.UI.VerticalLayoutGroup>();
+                
+                vlg.childControlHeight = false;
+                vlg.childControlWidth = true; // Allow width control if needed, but height must be false to keep prefab height
+                vlg.childForceExpandHeight = false;
+                vlg.childForceExpandWidth = false;
+                vlg.spacing = 15f;
+
+                var csf = itemsContainer.GetComponent<UnityEngine.UI.ContentSizeFitter>();
+                if (csf == null) csf = itemsContainer.gameObject.AddComponent<UnityEngine.UI.ContentSizeFitter>();
+                
+                // CRITICAL: Vertical fit must be PreferredSize for the dropdown to size correctly
+                csf.verticalFit = UnityEngine.UI.ContentSizeFitter.FitMode.PreferredSize;
             }
 
             RecalculateHeight();
             
             // Set initial state
-            if (expandableContentPanel != null)
+            if (expandableContentPanel != null && expandableContentPanel != itemsContainer)
             {
                 expandableContentPanel.sizeDelta = new Vector2(expandableContentPanel.sizeDelta.x, GetCollapsedHeight());
             }
@@ -127,6 +133,62 @@ namespace UI
             UpdateToggleVisuals(false);
         }
 
+        private void OnEnable()
+        {
+            if (fetchFromBackendOnStart && BackendAuthService.Instance != null && BackendAuthService.HasStoredJWT())
+            {
+                FetchBackendProfiles();
+            }
+            else
+            {
+                // Fallback to sample data if offline
+                SetProfiles(GetDynamicSampleProfiles());
+            }
+        }
+
+        private int GetTargetProfileCount()
+        {
+            int target = maxProfilesToFetch;
+
+            // 1. If actively playing, get exact player count from the current match
+            if (GameManager.Instance != null && GameManager.Instance.IsActivelyPlaying)
+            {
+                var matchData = GameManager.Instance.GetCurrentMatchData();
+                if (matchData != null && matchData.playerAvatars != null)
+                {
+                    // playerAvatars contains all players in the game (including local)
+                    return matchData.playerAvatars.Count;
+                }
+            }
+
+            // 2. Otherwise try to get selected mode player count from Lobby
+            var lobbyManager = FindFirstObjectByType<HorizontalLobbyManager>(FindObjectsInactive.Include);
+            if (lobbyManager != null && lobbyManager.SelectedPlayerCount > 0)
+            {
+                target = lobbyManager.SelectedPlayerCount;
+            }
+            return target;
+        }
+
+        private List<ProfileItemData> GetDynamicSampleProfiles()
+        {
+            int target = GetTargetProfileCount();
+            List<ProfileItemData> dynamicList = new List<ProfileItemData>();
+            
+            for (int i = 0; i < target; i++)
+            {
+                if (sampleProfiles != null && sampleProfiles.Count > 0)
+                {
+                    dynamicList.Add(sampleProfiles[i % sampleProfiles.Count]);
+                }
+                else
+                {
+                    dynamicList.Add(new ProfileItemData("Player " + (i + 1), Random.Range(100, 1000)));
+                }
+            }
+            return dynamicList;
+        }
+
         /// <summary>
         /// Fetches top profiles from BackendAuthService leaderboard
         /// </summary>
@@ -134,24 +196,39 @@ namespace UI
         {
             if (BackendAuthService.Instance == null) return;
 
-            BackendAuthService.Instance.GetLeaderboard(maxProfilesToFetch, (success, response) =>
+            int fetchCount = GetTargetProfileCount();
+
+            BackendAuthService.Instance.GetLeaderboard(fetchCount, "all_time", "earnings", (success, response) =>
             {
                 if (success && response != null && response.leaderboard != null && response.leaderboard.Count > 0)
                 {
                     List<ProfileItemData> backendData = new List<ProfileItemData>();
-                    foreach (var item in response.leaderboard)
+                    for (int i = 0; i < fetchCount; i++)
                     {
-                        backendData.Add(new ProfileItemData(item.name, item.wins));
+                        if (i < response.leaderboard.Count)
+                        {
+                            var item = response.leaderboard[i];
+                            backendData.Add(new ProfileItemData(item.name, item.wins));
+                        }
+                        else
+                        {
+                            // If backend returned less than requested, fill with sample or dummy data
+                            if (sampleProfiles != null && sampleProfiles.Count > 0)
+                            {
+                                backendData.Add(sampleProfiles[i % sampleProfiles.Count]);
+                            }
+                            else
+                            {
+                                backendData.Add(new ProfileItemData("Player " + (i + 1), Random.Range(100, 1000)));
+                            }
+                        }
                     }
                     SetProfiles(backendData);
                 }
                 else
                 {
                     // Fallback if backend fetch fails
-                    if (sampleProfiles != null && sampleProfiles.Count > 0)
-                    {
-                        SetProfiles(sampleProfiles);
-                    }
+                    SetProfiles(GetDynamicSampleProfiles());
                 }
             });
         }
@@ -171,7 +248,7 @@ namespace UI
 
             foreach (var profile in profiles)
             {
-                GameObject rowObj = Instantiate(profileRowPrefab, itemsContainer);
+                GameObject rowObj = Instantiate(profileRowPrefab, itemsContainer, false);
                 spawnedRowObjects.Add(rowObj);
 
                 // Try binding via ProfileDropdownRowUI script
@@ -182,16 +259,58 @@ namespace UI
                 }
                 else
                 {
-                    // Fallback to transform lookup
-                    var avatarImg = rowObj.transform.Find("AvatarImage")?.GetComponent<Image>();
-                    var nameText = rowObj.transform.Find("NameText")?.GetComponent<TextMeshProUGUI>();
-                    var scoreText = rowObj.transform.Find("ScoreText")?.GetComponent<TextMeshProUGUI>();
+                    // Smart Fallback: Find components even if they are not named correctly
+                    var texts = rowObj.GetComponentsInChildren<TextMeshProUGUI>();
+                    var images = rowObj.GetComponentsInChildren<Image>();
+
+                    TextMeshProUGUI nameText = texts.Length > 0 ? texts[0] : null;
+                    TextMeshProUGUI scoreText = texts.Length > 1 ? texts[1] : null;
+                    
+                    // The first image is usually the background, so we try to get the second one for avatar
+                    Image avatarImg = images.Length > 1 ? images[1] : (images.Length > 0 ? images[0] : null);
 
                     if (nameText != null) nameText.text = profile.username;
                     if (scoreText != null) scoreText.text = profile.score.ToString("N0");
                     if (avatarImg != null && profile.avatarSprite != null)
                     {
                         avatarImg.sprite = profile.avatarSprite;
+                        
+                        // Default to -1 (Current player's frame) for now, unless the backend sends other players' frames
+                        int frameIndex = -1;
+                        if (frameIndex == -1)
+                        {
+                            frameIndex = int.TryParse(PlayerModel.ProfileFrame, out int parsedFrame)
+                                ? parsedFrame
+                                : PlayerPrefs.GetInt("SelectedProfileFrameIndex", 0);
+                        }
+
+                        // Try to find explicitly named Frame Image in prefab
+                        Image frameImg = null;
+                        foreach(var img in images) {
+                            if (img.gameObject.name.Contains("Frame")) {
+                                frameImg = img;
+                                break;
+                            }
+                        }
+
+                        if (frameImg != null && AvatarSelector.Instance != null)
+                        {
+                            Sprite fSprite = AvatarSelector.Instance.GetBackgroundSpriteByIndex(frameIndex);
+                            if (fSprite != null)
+                            {
+                                frameImg.sprite = fSprite;
+                                frameImg.gameObject.SetActive(true);
+                            }
+                            else
+                            {
+                                frameImg.gameObject.SetActive(false);
+                            }
+                        }
+                        else
+                        {
+                            // Fallback to overlay if no explicit frame object
+                            UIProfileHelper.ApplyFrameToImage(avatarImg, frameIndex);
+                        }
                     }
                 }
             }
@@ -201,10 +320,34 @@ namespace UI
 
         private void RecalculateHeight()
         {
+            if (itemsContainer != null)
+            {
+                UnityEngine.UI.LayoutRebuilder.ForceRebuildLayoutImmediate(itemsContainer);
+            }
             Canvas.ForceUpdateCanvases();
+            
             if (expandableContentPanel != null)
             {
                 fullPanelHeight = itemsContainer != null ? itemsContainer.rect.height : expandableContentPanel.rect.height;
+                
+                if (isExpanded)
+                {
+                    float targetHeight = Mathf.Max(fullPanelHeight, GetCollapsedHeight());
+                    if (expandableContentPanel != itemsContainer)
+                    {
+                        expandableContentPanel.sizeDelta = new Vector2(expandableContentPanel.sizeDelta.x, targetHeight);
+                    }
+                    
+                    if (backgroundPanel != null)
+                    {
+                        float bgTargetHeight = targetHeight + backgroundCollapsedHeight;
+                        backgroundPanel.sizeDelta = new Vector2(backgroundPanel.sizeDelta.x, bgTargetHeight);
+                    }
+                }
+            }
+            else if (itemsContainer != null)
+            {
+                fullPanelHeight = itemsContainer.rect.height;
             }
         }
 
@@ -269,24 +412,25 @@ namespace UI
             }
 
             // Expand/Collapse Panel height
-            if (expandableContentPanel != null)
+            RecalculateHeight();
+            float collapsedHeight = GetCollapsedHeight();
+            float targetHeight = open ? Mathf.Max(fullPanelHeight, collapsedHeight) : collapsedHeight;
+            
+            if (expandableContentPanel != null && expandableContentPanel != itemsContainer)
             {
                 expandableContentPanel.DOKill();
-                RecalculateHeight();
-                float collapsedHeight = GetCollapsedHeight();
-                float targetHeight = open ? Mathf.Max(fullPanelHeight, collapsedHeight) : collapsedHeight;
                 expandableContentPanel.DOSizeDelta(new Vector2(expandableContentPanel.sizeDelta.x, targetHeight), animationDuration)
                     .SetEase(animationEase)
                     .SetLink(expandableContentPanel.gameObject);
+            }
 
-                if (backgroundPanel != null)
-                {
-                    backgroundPanel.DOKill();
-                    float bgTargetHeight = open ? (targetHeight + backgroundCollapsedHeight) : (collapsedHeight + backgroundCollapsedHeight);
-                    backgroundPanel.DOSizeDelta(new Vector2(backgroundPanel.sizeDelta.x, bgTargetHeight), animationDuration)
-                        .SetEase(animationEase)
-                        .SetLink(backgroundPanel.gameObject);
-                }
+            if (backgroundPanel != null)
+            {
+                backgroundPanel.DOKill();
+                float bgTargetHeight = open ? (targetHeight + backgroundCollapsedHeight) : (collapsedHeight + backgroundCollapsedHeight);
+                backgroundPanel.DOSizeDelta(new Vector2(backgroundPanel.sizeDelta.x, bgTargetHeight), animationDuration)
+                    .SetEase(animationEase)
+                    .SetLink(backgroundPanel.gameObject);
             }
 
             UpdateToggleVisuals(open);

@@ -13,7 +13,7 @@ public class BackendAuthService : MonoBehaviour
     [Tooltip("Backend environment config (assign BackendConfig asset, or place one in Resources/BackendConfig.asset)")]
     [SerializeField] private BackendConfig backendConfig;
 
-    private string baseUrl => (backendConfig != null ? backendConfig : BackendConfig.Load())?.ApiUrl ?? "https://loving-filled-occasions-breaks.trycloudflare.com";
+    private string baseUrl => (backendConfig != null ? backendConfig : BackendConfig.Load())?.ApiUrl ?? "https://honest-creator-feof-enb.trycloudflare.com";
 
     private const string JWT_PREF_KEY = "CustomBackendJWT";
 
@@ -1127,19 +1127,21 @@ public class BackendAuthService : MonoBehaviour
     /// <summary>
     /// Fetches the global leaderboard from the backend.
     /// </summary>
-    public void GetLeaderboard(int limit, Action<bool, LeaderboardResponse> onComplete)
+    public void GetLeaderboard(int limit, string period, string category, Action<bool, LeaderboardResponse> onComplete)
     {
         if (!HasStoredJWT())
         {
             onComplete?.Invoke(false, null);
             return;
         }
-        StartCoroutine(GetLeaderboardCoroutine(limit, onComplete));
+        StartCoroutine(GetLeaderboardCoroutine(limit, period, category, onComplete));
     }
 
-    private IEnumerator GetLeaderboardCoroutine(int limit, Action<bool, LeaderboardResponse> onComplete)
+    private IEnumerator GetLeaderboardCoroutine(int limit, string period, string category, Action<bool, LeaderboardResponse> onComplete)
     {
         string url = baseUrl.TrimEnd('/') + "/api/leaderboard?limit=" + limit;
+        if (!string.IsNullOrEmpty(period)) url += "&period=" + period;
+        if (!string.IsNullOrEmpty(category)) url += "&category=" + category;
         string token = GetStoredJWT();
 
         using (UnityWebRequest request = UnityWebRequest.Get(url))
@@ -1436,72 +1438,31 @@ public class BackendAuthService : MonoBehaviour
     }
 
     /// <summary>
-    /// Synchronizes the completed payment intent with the server.
+    /// Fetches active shop items and offers.
     /// </summary>
-    public void SyncDeposit(string paymentIntentId, Action<bool, string> onComplete)
+    public void GetShopItems(Action<bool, ShopItemsResponse> onComplete)
     {
-        if (!HasStoredJWT())
-        {
-            onComplete?.Invoke(false, "Unauthorized: No stored JWT");
-            return;
-        }
-        StartCoroutine(SyncDepositCoroutine(paymentIntentId, onComplete));
+        StartCoroutine(GetShopItemsCoroutine(onComplete));
     }
 
-    private IEnumerator SyncDepositCoroutine(string paymentIntentId, Action<bool, string> onComplete)
+    private IEnumerator GetShopItemsCoroutine(Action<bool, ShopItemsResponse> onComplete)
     {
-        string url = baseUrl.TrimEnd('/') + "/api/wallet/sync-deposit/" + paymentIntentId;
-        string token = GetStoredJWT();
-
-        using (UnityWebRequest request = new UnityWebRequest(url, "POST"))
+        string url = baseUrl.TrimEnd('/') + "/api/shop/items";
+        using (UnityWebRequest request = UnityWebRequest.Get(url))
         {
-            request.downloadHandler = new DownloadHandlerBuffer();
-            request.SetRequestHeader("Authorization", "Bearer " + token);
-
+            if (HasStoredJWT()) request.SetRequestHeader("Authorization", "Bearer " + GetStoredJWT());
             yield return request.SendWebRequest();
 
             if (request.result == UnityWebRequest.Result.Success)
             {
-                Debug.Log($"<color=#00ff00>[BackendAuthService] SUCCESS: Sync Deposit Result: {request.downloadHandler.text}</color>");
                 try
                 {
-                    AuthResponse response = JsonUtility.FromJson<AuthResponse>(request.downloadHandler.text);
-                    if (response != null && response.user != null && !string.IsNullOrEmpty(response.user.id))
-                    {
-                        PlayerModel.UpdateData(
-                            response.user.id, response.user.name, response.user.email,
-                            response.user.wins, response.user.losses, response.user.balance,
-                            response.user.cashBalance, response.user.bonusBalance, response.user.winningBalance,
-                            response.user.coins, response.user.avatar, response.user.xp,
-                            response.user.level, response.user.role, 0,
-                            response.user.activeMatchId, response.user.activeRoomId
-                        );
-                        onComplete?.Invoke(true, "Deposit synced successfully!");
-                    }
-                    else
-                    {
-                        if (response != null && response.success)
-                        {
-                            Debug.LogWarning("[BackendAuthService] Deposit sync succeeded but no user wallet data was returned. Keeping current local balances.");
-                            onComplete?.Invoke(true, "Deposit synced successfully (local balance unchanged).");
-                        }
-                        else
-                        {
-                            onComplete?.Invoke(false, "Failed to parse updated user data.");
-                        }
-                    }
+                    ShopItemsResponse response = JsonUtility.FromJson<ShopItemsResponse>(request.downloadHandler.text);
+                    onComplete?.Invoke(true, response);
                 }
-                catch (Exception e)
-                {
-                    Debug.LogError($"[BackendAuthService] Sync Deposit Parse Error: {e.Message}");
-                    onComplete?.Invoke(false, "JSON parsing failed.");
-                }
+                catch { onComplete?.Invoke(false, null); }
             }
-            else
-            {
-                Debug.LogError($"[BackendAuthService] Sync Deposit Error: {request.error} | {request.downloadHandler.text}");
-                onComplete?.Invoke(false, request.downloadHandler.text);
-            }
+            else onComplete?.Invoke(false, null);
         }
     }
 
@@ -1736,8 +1697,12 @@ public class BackendAuthService : MonoBehaviour
         public int gameTimer;
         public float entryFeeCash;
         public int entryFeeCoins;
+        public float stake;
+        public int stakeCoins;
         public float firstPlaceCash;
         public int firstPlaceCoins;
+        public float prizePool;
+        public int prizePoolCoins;
         public float secondPlaceCash;
         public int secondPlaceCoins;
         public float thirdPlaceCash;
@@ -1770,6 +1735,8 @@ public class BackendAuthService : MonoBehaviour
     public class LeaderboardResponse
     {
         public bool success;
+        public string period;
+        public string category;
         public LeaderboardMe me;
         public List<LeaderboardItem> leaderboard;
     }
@@ -1781,6 +1748,8 @@ public class BackendAuthService : MonoBehaviour
         public string userId;
         public string name;
         public string avatar;
+        public string profileFrame;
+        public int value;
         public int wins;
         public int losses;
     }
@@ -1792,6 +1761,8 @@ public class BackendAuthService : MonoBehaviour
         public string userId;
         public string name;
         public string avatar;
+        public string profileFrame;
+        public int value;
         public int wins;
         public int losses;
     }
@@ -1891,6 +1862,144 @@ public class BackendAuthService : MonoBehaviour
         public string ticketId;
         public string status;
         public string category;
+    }
+
+    [Serializable]
+    public class ShopItemsResponse
+    {
+        public bool success;
+        public ShopItem[] data;
+    }
+
+    [Serializable]
+    public class ShopItem
+    {
+        public string id;
+        public string type;
+        public string name;
+        public float price;
+        public int chipsAmount;
+        public float cashAmount;
+        public float cashBonus;
+    }
+
+    [Serializable]
+    public class WithdrawalInfoResponse
+    {
+        public bool success;
+        public WithdrawalInfoData data;
+    }
+
+    [Serializable]
+    public class WithdrawalInfoData
+    {
+        public int minAmount;
+        public int maxAmount;
+        public WithdrawalFeeTier[] feeTiers;
+        public float withdrawableBalance;
+        public float bonusBalance;
+        public WithdrawalQuote quote;
+    }
+
+    [Serializable]
+    public class WithdrawalFeeTier
+    {
+        public int? upTo;
+        public int fee;
+    }
+
+    [Serializable]
+    public class WithdrawalQuote
+    {
+        public bool valid;
+        public float amount;
+        public float fee;
+        public float receives;
+        public string reason;
+    }
+
+    [Serializable]
+    public class PublicProfileResponse
+    {
+        public bool success;
+        public PublicProfileData data;
+    }
+
+    [Serializable]
+    public class PublicProfileData
+    {
+        public string id;
+        public string name;
+        public string avatar;
+        public string profileFrame;
+        public string country;
+        public string league;
+        public int level;
+        public int xp;
+        public int wins;
+        public int losses;
+        public int gamesPlayed;
+        public int winRate;
+        public int winStreak;
+        public int bestStreak;
+        public int totalScore;
+        public int highScore;
+        public int totalPlayTimeSeconds;
+        public int loginStreak;
+        public int likesReceived;
+        public int rank;
+        public string memberSince;
+    }
+
+    [Serializable]
+    public class LikeProfileResponse
+    {
+        public bool success;
+        public bool alreadyLiked;
+        public int likesReceived;
+    }
+
+    [Serializable]
+    public class WeeklyTasksResponse
+    {
+        public bool success;
+        public WeeklyTasksData data;
+    }
+
+    [Serializable]
+    public class WeeklyTasksData
+    {
+        public string weekStart;
+        public WeeklyTask[] tasks;
+    }
+
+    [Serializable]
+    public class WeeklyTask
+    {
+        public string taskId;
+        public string title;
+        public string type;
+        public int target;
+        public int progress;
+        public bool completed;
+        public bool claimed;
+        public int reward;
+    }
+
+    [Serializable]
+    public class ClaimTaskResponse
+    {
+        public bool success;
+        public string message;
+        public ClaimTaskData data;
+    }
+
+    [Serializable]
+    public class ClaimTaskData
+    {
+        public bool success;
+        public string taskId;
+        public int reward;
     }
 
     /// <summary>
@@ -1995,6 +2104,257 @@ public class BackendAuthService : MonoBehaviour
                 Debug.LogError($"<color=#ff0000>[BackendAuthService] Get Tickets Error: {request.error}</color>");
                 onComplete?.Invoke(false, request.downloadHandler.text, null);
             }
+        }
+    }
+
+    // ─── Avatar & Profile (New) ───────────────────────────────────────────────────
+
+    public void ResetAvatar(Action<bool, string> onComplete)
+    {
+        if (!HasStoredJWT()) { onComplete?.Invoke(false, "No stored JWT"); return; }
+        StartCoroutine(ResetAvatarCoroutine(onComplete));
+    }
+
+    private IEnumerator ResetAvatarCoroutine(Action<bool, string> onComplete)
+    {
+        string url = baseUrl.TrimEnd('/') + "/api/auth/avatar";
+        using (UnityWebRequest request = new UnityWebRequest(url, "DELETE"))
+        {
+            request.SetRequestHeader("Authorization", "Bearer " + GetStoredJWT());
+            request.downloadHandler = new DownloadHandlerBuffer();
+            yield return request.SendWebRequest();
+
+            if (request.result == UnityWebRequest.Result.Success)
+            {
+                try
+                {
+                    AuthResponse response = JsonUtility.FromJson<AuthResponse>(request.downloadHandler.text);
+                    if (response != null && response.user != null)
+                    {
+                        PlayerModel.UpdateData(
+                            response.user.id, response.user.name, response.user.email,
+                            response.user.wins, response.user.losses, response.user.balance,
+                            response.user.cashBalance, response.user.bonusBalance, response.user.winningBalance,
+                            response.user.coins, response.user.avatar, response.user.xp,
+                            response.user.level, response.user.role, 0,
+                            response.user.activeMatchId, response.user.activeRoomId,
+                            response.user.withdrawableBalance
+                        );
+                        onComplete?.Invoke(true, "Avatar reset to default");
+                    }
+                    else onComplete?.Invoke(false, "Failed to parse response");
+                }
+                catch { onComplete?.Invoke(false, "JSON parsing failed"); }
+            }
+            else onComplete?.Invoke(false, request.downloadHandler.text);
+        }
+    }
+
+    // ─── Discord Auth ─────────────────────────────────────────────────────────────
+
+    public void DiscordLogin(string code, string redirectUri, Action<bool, string> onComplete)
+    {
+        StartCoroutine(DiscordLoginCoroutine("/api/auth/discord", code, redirectUri, onComplete, false));
+    }
+
+    public void LinkDiscord(string code, string redirectUri, Action<bool, string> onComplete)
+    {
+        if (!HasStoredJWT()) { onComplete?.Invoke(false, "Not logged in"); return; }
+        StartCoroutine(DiscordLoginCoroutine("/api/auth/discord/link", code, redirectUri, onComplete, true));
+    }
+
+    private IEnumerator DiscordLoginCoroutine(string endpoint, string code, string redirectUri, Action<bool, string> onComplete, bool requireAuth)
+    {
+        string url = baseUrl.TrimEnd('/') + endpoint;
+        string jsonData = $"{{\"code\":\"{code}\", \"redirectUri\":\"{redirectUri}\"}}";
+
+        using (UnityWebRequest request = new UnityWebRequest(url, "POST"))
+        {
+            request.uploadHandler = new UploadHandlerRaw(Encoding.UTF8.GetBytes(jsonData));
+            request.downloadHandler = new DownloadHandlerBuffer();
+            request.SetRequestHeader("Content-Type", "application/json");
+            if (requireAuth) request.SetRequestHeader("Authorization", "Bearer " + GetStoredJWT());
+
+            yield return request.SendWebRequest();
+
+            if (request.result == UnityWebRequest.Result.Success)
+            {
+                try
+                {
+                    AuthResponse response = JsonUtility.FromJson<AuthResponse>(request.downloadHandler.text);
+                    if (response != null && response.user != null)
+                    {
+                        PlayerModel.UpdateData(
+                            response.user.id, response.user.name, response.user.email,
+                            response.user.wins, response.user.losses, response.user.balance,
+                            response.user.cashBalance, response.user.bonusBalance, response.user.winningBalance,
+                            response.user.coins, response.user.avatar, response.user.xp,
+                            response.user.level, response.user.role, 0,
+                            response.user.activeMatchId, response.user.activeRoomId,
+                            response.user.withdrawableBalance
+                        );
+                        if (!string.IsNullOrEmpty(response.token))
+                        {
+                            PlayerPrefs.SetString(JWT_PREF_KEY, response.token);
+                            PlayerPrefs.Save();
+                        }
+                        onComplete?.Invoke(true, "Discord auth successful!");
+                    }
+                    else onComplete?.Invoke(false, "Failed to parse response");
+                }
+                catch { onComplete?.Invoke(false, "JSON parsing failed"); }
+            }
+            else onComplete?.Invoke(false, request.downloadHandler.text);
+        }
+    }
+
+    // ─── Withdrawal Info ──────────────────────────────────────────────────────────
+
+    public void GetWithdrawalInfo(float? amount, Action<bool, WithdrawalInfoResponse> onComplete)
+    {
+        if (!HasStoredJWT()) { onComplete?.Invoke(false, null); return; }
+        StartCoroutine(GetWithdrawalInfoCoroutine(amount, onComplete));
+    }
+
+    private IEnumerator GetWithdrawalInfoCoroutine(float? amount, Action<bool, WithdrawalInfoResponse> onComplete)
+    {
+        string url = baseUrl.TrimEnd('/') + "/api/wallet/withdrawal-info";
+        if (amount.HasValue) url += $"?amount={amount.Value}";
+
+        using (UnityWebRequest request = UnityWebRequest.Get(url))
+        {
+            request.SetRequestHeader("Authorization", "Bearer " + GetStoredJWT());
+            yield return request.SendWebRequest();
+
+            if (request.result == UnityWebRequest.Result.Success)
+            {
+                try
+                {
+                    WithdrawalInfoResponse response = JsonUtility.FromJson<WithdrawalInfoResponse>(request.downloadHandler.text);
+                    onComplete?.Invoke(true, response);
+                }
+                catch { onComplete?.Invoke(false, null); }
+            }
+            else onComplete?.Invoke(false, null);
+        }
+    }
+
+    // ─── Public Profile & Likes ───────────────────────────────────────────────────
+
+    public void GetPublicProfile(string userId, Action<bool, PublicProfileResponse> onComplete)
+    {
+        if (!HasStoredJWT()) { onComplete?.Invoke(false, null); return; }
+        StartCoroutine(GetPublicProfileCoroutine(userId, onComplete));
+    }
+
+    private IEnumerator GetPublicProfileCoroutine(string userId, Action<bool, PublicProfileResponse> onComplete)
+    {
+        string url = baseUrl.TrimEnd('/') + "/api/profile/" + userId;
+        using (UnityWebRequest request = UnityWebRequest.Get(url))
+        {
+            request.SetRequestHeader("Authorization", "Bearer " + GetStoredJWT());
+            yield return request.SendWebRequest();
+
+            if (request.result == UnityWebRequest.Result.Success)
+            {
+                try
+                {
+                    PublicProfileResponse response = JsonUtility.FromJson<PublicProfileResponse>(request.downloadHandler.text);
+                    onComplete?.Invoke(true, response);
+                }
+                catch { onComplete?.Invoke(false, null); }
+            }
+            else onComplete?.Invoke(false, null);
+        }
+    }
+
+    public void LikeProfile(string userId, Action<bool, LikeProfileResponse> onComplete)
+    {
+        if (!HasStoredJWT()) { onComplete?.Invoke(false, null); return; }
+        StartCoroutine(LikeProfileCoroutine(userId, onComplete));
+    }
+
+    private IEnumerator LikeProfileCoroutine(string userId, Action<bool, LikeProfileResponse> onComplete)
+    {
+        string url = baseUrl.TrimEnd('/') + "/api/profile/" + userId + "/like";
+        using (UnityWebRequest request = new UnityWebRequest(url, "POST"))
+        {
+            request.SetRequestHeader("Authorization", "Bearer " + GetStoredJWT());
+            request.downloadHandler = new DownloadHandlerBuffer();
+            yield return request.SendWebRequest();
+
+            if (request.result == UnityWebRequest.Result.Success)
+            {
+                try
+                {
+                    LikeProfileResponse response = JsonUtility.FromJson<LikeProfileResponse>(request.downloadHandler.text);
+                    onComplete?.Invoke(true, response);
+                }
+                catch { onComplete?.Invoke(false, null); }
+            }
+            else onComplete?.Invoke(false, null);
+        }
+    }
+
+    // ─── Weekly Tasks ─────────────────────────────────────────────────────────────
+
+    public void GetWeeklyTasks(Action<bool, WeeklyTasksResponse> onComplete)
+    {
+        if (!HasStoredJWT()) { onComplete?.Invoke(false, null); return; }
+        StartCoroutine(GetWeeklyTasksCoroutine(onComplete));
+    }
+
+    private IEnumerator GetWeeklyTasksCoroutine(Action<bool, WeeklyTasksResponse> onComplete)
+    {
+        string url = baseUrl.TrimEnd('/') + "/api/tasks/weekly";
+        using (UnityWebRequest request = UnityWebRequest.Get(url))
+        {
+            request.SetRequestHeader("Authorization", "Bearer " + GetStoredJWT());
+            yield return request.SendWebRequest();
+
+            if (request.result == UnityWebRequest.Result.Success)
+            {
+                try
+                {
+                    WeeklyTasksResponse response = JsonUtility.FromJson<WeeklyTasksResponse>(request.downloadHandler.text);
+                    onComplete?.Invoke(true, response);
+                }
+                catch { onComplete?.Invoke(false, null); }
+            }
+            else onComplete?.Invoke(false, null);
+        }
+    }
+
+    public void ClaimWeeklyTask(string taskId, Action<bool, ClaimTaskResponse> onComplete)
+    {
+        if (!HasStoredJWT()) { onComplete?.Invoke(false, null); return; }
+        StartCoroutine(ClaimWeeklyTaskCoroutine(taskId, onComplete));
+    }
+
+    private IEnumerator ClaimWeeklyTaskCoroutine(string taskId, Action<bool, ClaimTaskResponse> onComplete)
+    {
+        string url = baseUrl.TrimEnd('/') + "/api/tasks/weekly/claim";
+        string jsonData = $"{{\"taskId\":\"{taskId}\"}}";
+
+        using (UnityWebRequest request = new UnityWebRequest(url, "POST"))
+        {
+            request.uploadHandler = new UploadHandlerRaw(Encoding.UTF8.GetBytes(jsonData));
+            request.downloadHandler = new DownloadHandlerBuffer();
+            request.SetRequestHeader("Content-Type", "application/json");
+            request.SetRequestHeader("Authorization", "Bearer " + GetStoredJWT());
+
+            yield return request.SendWebRequest();
+
+            if (request.result == UnityWebRequest.Result.Success)
+            {
+                try
+                {
+                    ClaimTaskResponse response = JsonUtility.FromJson<ClaimTaskResponse>(request.downloadHandler.text);
+                    onComplete?.Invoke(true, response);
+                }
+                catch { onComplete?.Invoke(false, null); }
+            }
+            else onComplete?.Invoke(false, null);
         }
     }
 }

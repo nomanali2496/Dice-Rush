@@ -177,7 +177,7 @@ public class LeaderboardManager : MonoBehaviour, IEnhancedScrollerDelegate
         if (BackendAuthService.Instance != null && BackendAuthService.HasStoredJWT())
         {
             Debug.Log("[LeaderboardManager] Requesting real leaderboard from backend...");
-            BackendAuthService.Instance.GetLeaderboard(LeaderboardEntryLimit, (success, response) =>
+            BackendAuthService.Instance.GetLeaderboard(LeaderboardEntryLimit, "all_time", "earnings", (success, response) =>
             {
                 if (success && response != null && response.leaderboard != null)
                 {

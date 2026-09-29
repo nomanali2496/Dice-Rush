@@ -15,5 +15,5 @@ MonoBehaviour:
   activeEnvironment: 1
   devApiUrl: http://localhost:3000
   devSocketUrl: ws://localhost:3000
-  prodApiUrl: https://sustainability-underwear-afterwards-painted.trycloudflare.com/
-  prodSocketUrl: https://sustainability-underwear-afterwards-painted.trycloudflare.com/
+  prodApiUrl: https://honest-creator-feof-enb.trycloudflare.com/
+  prodSocketUrl: https://honest-creator-feof-enb.trycloudflare.com/

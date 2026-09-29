@@ -44,7 +44,7 @@ public class HorizontalLobbyManager : MonoBehaviour
     [SerializeField] private Button disconnectSocketButton; // Back button to leave lobby and disconnect
     
     [Header("Lobby Game Objects Settings")]
-    private int BACKGROUND_COUNT => LobbyModel.Configurations.Length; 
+    private int BACKGROUND_COUNT => LobbyModel.StandardBoardCount; // Always 12 standard boards
     
     // Lobby scroll management
     private LobbyGameObjectData[] _lobbyObjectsData; // Array of current lobby objects
@@ -62,6 +62,18 @@ public class HorizontalLobbyManager : MonoBehaviour
     [SerializeField] private Sprite unselectedDotImage; // Image to show when dot is not selected
     
     private List<Button> dynamicDots = new List<Button>(); // List of instantiated dots
+
+    [Header("Dynamic Background Color")]
+    [SerializeField] private Image mainBackgroundImage; // Reference to the main panel's background image
+    [SerializeField] private float colorTransitionDuration = 0.3f;
+    [SerializeField] private List<LobbyColorMapping> backgroundColorMappings = new List<LobbyColorMapping>();
+
+    [System.Serializable]
+    public class LobbyColorMapping
+    {
+        public string lobbyId;
+        public Color backgroundColor = Color.white;
+    }
 
 
     
@@ -222,8 +234,9 @@ public class HorizontalLobbyManager : MonoBehaviour
         if (SettingManager.instance != null)
             SettingManager.instance.ApplyMusicSetting();
 
-        if (_lobbyObjectsData != null && _lobbyObjectsData.Length > 0 && allLobbyItems != null && allLobbyItems.Count > 0)
+        if (_lobbyObjectsData != null && _lobbyObjectsData.Length == BACKGROUND_COUNT && allLobbyItems != null && allLobbyItems.Count == BACKGROUND_COUNT)
         {
+            RefreshLobbyCardsData();
             UpdateVisibleRows(true);
         }
         else
@@ -257,8 +270,9 @@ public class HorizontalLobbyManager : MonoBehaviour
             SettingManager.instance.ApplyMusicSetting();
 
         // Refresh lobby rows when GameObject becomes active
-        if (_lobbyObjectsData != null && _lobbyObjectsData.Length > 0 && allLobbyItems != null && allLobbyItems.Count > 0)
+        if (_lobbyObjectsData != null && _lobbyObjectsData.Length == BACKGROUND_COUNT && allLobbyItems != null && allLobbyItems.Count == BACKGROUND_COUNT)
         {
+            RefreshLobbyCardsData();
             UpdateVisibleRows(true);
         }
         else
@@ -394,7 +408,7 @@ public class HorizontalLobbyManager : MonoBehaviour
         _lobbyObjectsData = new LobbyGameObjectData[BACKGROUND_COUNT];
         for (int i = 0; i < BACKGROUND_COUNT; i++)
         {
-            LobbyConfig config = LobbyModel.GetConfig(i);
+            LobbyConfig config = GetLobbyConfig(i);
             string imageUrl = config != null ? config.imageUrl : "";
             string lobbyId = config != null ? config.lobbyId : "";
             _lobbyObjectsData[i] = new LobbyGameObjectData(i, i, lobbyId, imageUrl);
@@ -527,6 +541,13 @@ public class HorizontalLobbyManager : MonoBehaviour
                  item.gameObject.SetActive(true);
                  item.RefreshPlayButtonsInteractability();
                  item.SetSelectedState(true);
+                 
+                 // Update main background color to match the selected lobby
+                 LobbyGameObjectData data = _lobbyObjectsData[i];
+                 if (data != null)
+                 {
+                     UpdateMainBackgroundColor(data.lobbyIndex, data.lobbyId);
+                 }
 
                  if (instant)
                  {
@@ -576,6 +597,65 @@ public class HorizontalLobbyManager : MonoBehaviour
         
         // Update Dots
         UpdateDotButtons();
+    }
+    
+    private void UpdateMainBackgroundColor(int lobbyIndex, string lobbyId)
+    {
+        if (mainBackgroundImage == null) return;
+        
+        Color targetColor = Color.white; // Default color
+        bool colorFound = false;
+
+        // Find the color mapping for the current lobby
+        if (backgroundColorMappings != null)
+        {
+            // Try matching by ID first
+            foreach (var mapping in backgroundColorMappings)
+            {
+                if (mapping != null && !string.IsNullOrEmpty(mapping.lobbyId) && mapping.lobbyId == lobbyId)
+                {
+                    targetColor = mapping.backgroundColor;
+                    colorFound = true;
+                    break;
+                }
+            }
+
+            // Fallback 1: Smart matching based on the lobby ID string (Very robust)
+            if (!colorFound && !string.IsNullOrEmpty(lobbyId))
+            {
+                string id = lobbyId.ToLower();
+                if (id.Contains("monaco") || id.Contains("monte")) { targetColor = new Color(0.04f, 0.17f, 0.35f, 1f); colorFound = true; } // Dark Blue
+                else if (id.Contains("atlantic")) { targetColor = new Color(0.06f, 0.3f, 0.08f, 1f); colorFound = true; } // Green
+                else if (id.Contains("macau")) { targetColor = new Color(0.35f, 0.05f, 0.05f, 1f); colorFound = true; } // Red
+                else if (id.Contains("vegas")) { targetColor = new Color(0.08f, 0.08f, 0.08f, 1f); colorFound = true; } // Black/Dark Gray
+                else if (id.Contains("singapore")) { targetColor = new Color(0.25f, 0.15f, 0.05f, 1f); colorFound = true; } // Brown
+                else if (id.Contains("london")) { targetColor = new Color(0.2f, 0.2f, 0.2f, 1f); colorFound = true; } // Gray
+                else if (id.Contains("melbourne")) { targetColor = new Color(0.4f, 0.3f, 0.05f, 1f); colorFound = true; } // Gold/Dark Yellow
+                else if (id.Contains("custom") || id.Contains("arena")) { targetColor = new Color(0.08f, 0.08f, 0.08f, 1f); colorFound = true; } // Private Table (Black/Dark Gray)
+            }
+
+            // Fallback 2: If still no ID matched (e.g. left empty in Inspector), match by index
+            if (!colorFound && lobbyIndex >= 0 && lobbyIndex < backgroundColorMappings.Count)
+            {
+                if (backgroundColorMappings[lobbyIndex] != null)
+                {
+                    targetColor = backgroundColorMappings[lobbyIndex].backgroundColor;
+                    colorFound = true;
+                }
+            }
+        }
+        
+        // If we still didn't find a color (e.g. out of bounds for Private Table), fallback to Element 0
+        if (!colorFound && backgroundColorMappings != null && backgroundColorMappings.Count > 0)
+        {
+            targetColor = backgroundColorMappings[0].backgroundColor;
+        }
+
+        // Force Alpha to 1 (fully opaque) in case the color picker left it transparent
+        targetColor.a = 1f;
+        
+        mainBackgroundImage.DOKill();
+        mainBackgroundImage.DOColor(targetColor, colorTransitionDuration).SetEase(Ease.InOutQuad);
     }
     
     private void SnapItemToPosition(LobbyRowCellView item, Transform anchor, Vector3 localPos, float scale, float opacity)
@@ -893,7 +973,7 @@ public class HorizontalLobbyManager : MonoBehaviour
     
     public LobbyConfig GetLobbyConfig(int lobbyIndex)
     {
-        return LobbyModel.GetConfig(lobbyIndex);
+        return LobbyModel.GetBoardConfig(lobbyIndex, SelectedPlayerCount);
     }
     
     public bool CanPlayerAffordEntryFee(int lobbyIndex)
@@ -901,8 +981,18 @@ public class HorizontalLobbyManager : MonoBehaviour
         LobbyConfig config = GetLobbyConfig(lobbyIndex);
         if (config == null) return false; 
         
-        if (config.entryFeeCash > 0f && PlayerModel.CashBalance < config.entryFeeCash) return false; 
-        if (config.entryFeeChips > 0 && PlayerModel.Coins < config.entryFeeChips) return false; 
+        if (config.isArenaPreset)
+        {
+            if (config.entryFeeCash > 0f && PlayerModel.CashBalance < config.entryFeeCash) return false;
+        }
+        else
+        {
+            if (config.entryFeeChips > 0) {
+                if (PlayerModel.Coins < config.entryFeeChips) return false;
+            } else if (config.entryFeeCash > 0f) {
+                if (PlayerModel.CashBalance < config.entryFeeCash) return false;
+            }
+        }
         
         return true; 
     }
@@ -918,27 +1008,42 @@ public class HorizontalLobbyManager : MonoBehaviour
 
     public void OpenGameplayObject(int lobbyIndex = -1)
     {
+        if (lobbyIndex < 0) lobbyIndex = currentScrollIndex;
         LobbyConfig config = GetLobbyConfig(lobbyIndex);
         if (config == null) return;
 
         _pendingLobbyIndex = lobbyIndex;
         
-        int reqPlayers = SelectedPlayerCount > 0 ? SelectedPlayerCount : config.numberOfPlayers;
-        
-        // Calculate the fee (prioritize cash, fallback to chips)
-        float entryFee = config.entryFeeCash > 0 ? config.entryFeeCash : config.entryFeeChips;
-
-        // The selected player count is purely for UI sizing if needed, but matchmaking MUST use the exact backend mode.
-        string mode = config.mode;
-        string lobbyId = config.lobbyId;
-
-        // Removed the ArenaHostJoinPanel logic as requested.
-        // It will now proceed to the default matchmaking flow.
-        
+        // Arena presets require hosting/joining with an Arena code
         if (config.isArenaPreset)
         {
-            Debug.LogWarning("[HorizontalLobbyManager] Arena Preset Selected, but default Arena popup has been disabled.");
+            ArenaHostJoinPanel arenaPanel = ArenaHostJoinPanel.Instance != null 
+                ? ArenaHostJoinPanel.Instance 
+                : FindFirstObjectByType<ArenaHostJoinPanel>(FindObjectsInactive.Include);
+
+            if (arenaPanel != null)
+            {
+                Debug.Log($"[HorizontalLobbyManager] Arena Preset Selected. Opening ArenaHostJoinPanel for Lobby ID: {config.lobbyId}");
+                float arenaFee = config.entryFeeCash > 0 ? config.entryFeeCash : config.entryFeeChips;
+                arenaPanel.OpenPanel(config.lobbyId, arenaFee);
+            }
+            else
+            {
+                Debug.LogWarning("[HorizontalLobbyManager] Arena Preset Selected, but ArenaHostJoinPanel is not found in the scene.");
+            }
+            return; // NEVER fall through to public FindMatch for arena presets!
         }
+
+        int reqPlayers = SelectedPlayerCount > 0 ? SelectedPlayerCount : config.numberOfPlayers;
+        if (reqPlayers == 8) reqPlayers = 10; // Map 8p to 10p (Large board)
+        
+        // Calculate the fee (prioritize cash, fallback to chips)
+        float entryFee = config.isArenaPreset ? 
+            (config.entryFeeCash > 0 ? config.entryFeeCash : config.entryFeeChips) : 
+            (config.entryFeeChips > 0 ? config.entryFeeChips : config.entryFeeCash);
+
+        string mode = config.mode;
+        string lobbyId = config.lobbyId;
 
         Debug.Log($"[HorizontalLobbyManager] UI Button Clicked. Requesting match for {reqPlayers} players: ID {lobbyId}, Mode {mode}, Stake {entryFee}");
         
@@ -1091,70 +1196,25 @@ public class HorizontalLobbyManager : MonoBehaviour
     /// </summary>
     public void StartMatchmakingForPlayerCount(int playerCount, float defaultStake = 100f, string defaultLobbyId = "combo-dice")
     {
+        // 1. Set the selected player count based on what the user clicked (3, 5, 8, or 10)
         SelectedPlayerCount = Mathf.Clamp(playerCount, 2, 10);
 
+        // 2. Make sure the lobby panel is active
         if (gameObject != null && !gameObject.activeSelf)
         {
             gameObject.SetActive(true);
         }
 
-        int foundLobbyIndex = -1;
-        LobbyConfig foundConfig = null;
-
-        if (LobbyModel.Configurations != null && LobbyModel.Configurations.Length > 0)
-        {
-            for (int i = 0; i < LobbyModel.Configurations.Length; i++)
-            {
-                var cfg = LobbyModel.Configurations[i];
-                if (cfg != null && cfg.numberOfPlayers == playerCount)
-                {
-                    foundLobbyIndex = i;
-                    foundConfig = cfg;
-                    break;
-                }
-            }
-        }
-
-        if (foundConfig != null)
-        {
-            currentScrollIndex = foundLobbyIndex;
-            UpdateLobbyPositions(true);
-            OpenGameplayObject(foundLobbyIndex);
-        }
-        else
-        {
-            string mode = $"{playerCount}p";
-            Debug.Log($"[HorizontalLobbyManager] Requesting match for mode: {mode}, stake: {defaultStake}, players: {playerCount}");
-
-            if (waitingPanel != null)
-            {
-                waitingPanel.SetActive(true);
-            }
-            if (waitingStatusText != null)
-            {
-                waitingStatusText.text = "<size=200%><voffset=0.35em><sprite name=\"Dice 1 1\"></voffset></size><space=-0.5em>Match Starting Soon\nWaiting for players to join...";
-            }
-
-            if (SocketManager.Instance != null && BackendAuthService.HasStoredJWT())
-            {
-                MatchmakingModel.FindMatch(mode, defaultStake, defaultLobbyId);
-            }
-            else
-            {
-                // Fallback for offline / direct play: start game with exact player count immediately
-                if (waitingPanel != null) waitingPanel.SetActive(false);
-                LobbyConfig fallbackConfig = new LobbyConfig(-1, playerCount, defaultStake, 0, 0f, 0, 0f, 0, 0f, 0);
-                fallbackConfig.lobbyId = defaultLobbyId;
-                fallbackConfig.mode = $"{playerCount}p";
-
-                GameManager gm = GameManager.Instance != null ? GameManager.Instance : FindFirstObjectByType<GameManager>();
-                if (gm != null)
-                {
-                    gm.ConfigureGameFromLobby(fallbackConfig, playerCount - 1, GameManager.CreateFallbackMatchData(playerCount, defaultStake));
-                }
-                if (gameplayObject != null) gameplayObject.SetActive(true);
-            }
-        }
+        // 3. Filter the lobby cards! 
+        // RefreshLobbyCardsData() automatically uses SelectedPlayerCount to fetch 
+        // the exact 3p, 5p, or 10p variants from LobbyModel for all 12 boards!
+        RefreshLobbyCardsData();
+        
+        // 4. Snap back to the first board (Monaco) and update visuals
+        currentScrollIndex = 0;
+        UpdateLobbyPositions(true);
+        
+        Debug.Log($"[HorizontalLobbyManager] Lobby successfully filtered for {playerCount} players. Waiting for user to select a board.");
     }
 
     /// <summary>
@@ -1230,31 +1290,45 @@ public class HorizontalLobbyManager : MonoBehaviour
     
     private void HandleLobbyDataUpdated()
     {
-        Debug.Log($"[HorizontalLobbyManager] Lobby data updated. Re-initializing {BACKGROUND_COUNT} rows.");
+        Debug.Log($"[HorizontalLobbyManager] Lobby data updated from backend. Refreshing {BACKGROUND_COUNT} boards.");
         
-        // Instead of destroying and recreating items (which causes blinking),
-        // let's just update the existing ones if the count hasn't changed.
         if (allLobbyItems != null && allLobbyItems.Count == BACKGROUND_COUNT && _lobbyObjectsData != null && _lobbyObjectsData.Length == BACKGROUND_COUNT)
         {
-            for (int i = 0; i < BACKGROUND_COUNT; i++)
-            {
-                LobbyConfig config = LobbyModel.GetConfig(i);
-                string imageUrl = config != null ? config.imageUrl : "";
-                string lobbyId = config != null ? config.lobbyId : "";
-                _lobbyObjectsData[i] = new LobbyGameObjectData(i, i, lobbyId, imageUrl);
-                
-                if (allLobbyItems[i] != null)
-                {
-                    allLobbyItems[i].SetData(_lobbyObjectsData[i]);
-                }
-            }
+            RefreshLobbyCardsData();
         }
         else
         {
             InitializeLobbyRows();
-            InitializeDotNavigation(); // Re-create navigation dots for the new count
+            InitializeDotNavigation();
         }
         
+        RefreshAllPlayButtons();
+    }
+
+    /// <summary>
+    /// Refreshes data and visuals for the 12 standard boards in the carousel
+    /// based on the currently selected player count.
+    /// </summary>
+    public void RefreshLobbyCardsData()
+    {
+        if (_lobbyObjectsData == null || _lobbyObjectsData.Length != BACKGROUND_COUNT)
+        {
+            _lobbyObjectsData = new LobbyGameObjectData[BACKGROUND_COUNT];
+        }
+
+        for (int i = 0; i < BACKGROUND_COUNT; i++)
+        {
+            LobbyConfig config = GetLobbyConfig(i);
+            string imageUrl = config != null ? config.imageUrl : "";
+            string lobbyId = config != null ? config.lobbyId : "";
+            _lobbyObjectsData[i] = new LobbyGameObjectData(i, i, lobbyId, imageUrl);
+            
+            if (allLobbyItems != null && i < allLobbyItems.Count && allLobbyItems[i] != null)
+            {
+                allLobbyItems[i].SetData(_lobbyObjectsData[i]);
+            }
+        }
+
         RefreshAllPlayButtons();
     }
 

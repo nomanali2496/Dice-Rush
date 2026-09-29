@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 /// <summary>
 /// Displays selected avatar in main menu.
@@ -19,6 +20,11 @@ public class MainMenuAvatarDisplay : MonoBehaviour
     
     [Header("Custom Upload (Optional)")]
     [SerializeField] private Button selectCustomImageButton;
+    
+    [Header("Profile Details (Optional)")]
+    [SerializeField] private TMP_InputField playerNameInputField;
+    [SerializeField] private Slider xpSlider;
+    [SerializeField] private TextMeshProUGUI levelText;
     
     private string lastAvatarData = "";
 
@@ -56,7 +62,10 @@ public class MainMenuAvatarDisplay : MonoBehaviour
     {
         string avatarData = PlayerModel.Avatar;
 
-        // Skip redundant updates unless forced
+        // Refresh profile details (like name) regardless of avatar change
+        RefreshProfileDetails();
+
+        // Skip redundant avatar updates unless forced
         if (!force && avatarData == lastAvatarData && GetCurrentAvatarSprite() != null) return;
         lastAvatarData = avatarData;
 
@@ -87,6 +96,29 @@ public class MainMenuAvatarDisplay : MonoBehaviour
         RefreshFrame();
     }
 
+    private void RefreshProfileDetails()
+    {
+        if (playerNameInputField != null)
+        {
+            playerNameInputField.text = !string.IsNullOrEmpty(PlayerModel.Name) ? PlayerModel.Name : "Guest";
+            playerNameInputField.interactable = false;
+        }
+
+        if (levelText != null)
+        {
+            levelText.text = PlayerModel.Level > 0 ? PlayerModel.Level.ToString() : "1";
+        }
+
+        if (xpSlider != null)
+        {
+            // Simple XP logic: 1000 XP per level, remainder goes to slider
+            // Adjust maxValue/value logic if the backend gives a specific format
+            int xpRequirement = 1000;
+            xpSlider.maxValue = xpRequirement;
+            xpSlider.value = PlayerModel.Xp % xpRequirement;
+        }
+    }
+
     private void RefreshFrame()
     {
         if (frameImageSprite != null && AvatarSelector.Instance != null)
@@ -94,11 +126,16 @@ public class MainMenuAvatarDisplay : MonoBehaviour
             int frameIndex = int.TryParse(PlayerModel.ProfileFrame, out int parsedFrame)
                 ? parsedFrame
                 : PlayerPrefs.GetInt("SelectedProfileFrameIndex", 0);
+                
             Sprite frameSprite = AvatarSelector.Instance.GetBackgroundSpriteByIndex(frameIndex);
             if (frameSprite != null)
             {
                 frameImageSprite.sprite = frameSprite;
                 frameImageSprite.gameObject.SetActive(true);
+            }
+            else
+            {
+                frameImageSprite.gameObject.SetActive(false);
             }
         }
     }

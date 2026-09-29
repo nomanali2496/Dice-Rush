@@ -115,8 +115,8 @@ public class SplashScreen : MonoBehaviour
             progressSlider.value = Mathf.Clamp01(currentProgress);
         }
 
-        // Check if loading is complete
-        if (elapsedTime >= loadingDuration && (progressSlider == null || currentProgress >= 0.90f))
+        // Check if loading is complete (or force complete after safety margin)
+        if ((elapsedTime >= loadingDuration && (progressSlider == null || currentProgress >= 0.90f)) || elapsedTime >= (loadingDuration + 1f))
         {
             OnLoadingComplete();
         }
@@ -134,6 +134,12 @@ public class SplashScreen : MonoBehaviour
         
         // Hide splash panel and show game panel
         gameObject.SetActive(false);
+
+        if (gamePanel == null)
+        {
+            gamePanel = GameObject.Find("MainMenuScreen");
+            if (gamePanel == null) gamePanel = GameObject.Find("MainMenu");
+        }
         
         if (gamePanel != null)
         {

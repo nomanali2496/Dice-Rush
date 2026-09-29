@@ -115,7 +115,7 @@ public class DiceVisibilityManager : MonoBehaviour
         if (!isGameplayActive)
         {
             // Not on gameplay screen -> ALWAYS HIDE DICE
-            if (!areDicesHidden)
+            if (!areDicesHidden || dicesController.AreDicesActive())
             {
                 dicesController.HideDices();
                 areDicesHidden = true;
@@ -143,7 +143,7 @@ public class DiceVisibilityManager : MonoBehaviour
         // Only show dice when gameplay is active AND no panel is active
         if (anyPanelActive || !isGameplayActive)
         {
-            if (!areDicesHidden)
+            if (!areDicesHidden || dicesController.AreDicesActive())
             {
                 dicesController.HideDices();
                 areDicesHidden = true;
@@ -151,7 +151,7 @@ public class DiceVisibilityManager : MonoBehaviour
         }
         else
         {
-            if (areDicesHidden || !hasGameplayStarted)
+            if (areDicesHidden || !hasGameplayStarted || !dicesController.AreDicesActive())
             {
                 hasGameplayStarted = true;
                 dicesController.ShowDices();

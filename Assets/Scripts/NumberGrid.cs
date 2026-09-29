@@ -1568,7 +1568,6 @@ public class NumberGrid : MonoBehaviour
         // Only start if GameObject is active and enabled
         if (!gameObject.activeInHierarchy || !enabled)
         {
-            Debug.LogWarning("[NumberGrid] Cannot start powerup timer - GameObject is not active!");
             return;
         }
         

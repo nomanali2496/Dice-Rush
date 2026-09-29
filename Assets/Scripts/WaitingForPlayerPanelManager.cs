@@ -8,7 +8,8 @@ public class WaitingForPlayerPanelManager : MonoBehaviour
 {
     public static WaitingForPlayerPanelManager Instance { get; private set; }
 
-    public bool IsPanelActive => waitingForPlayerPanel != null ? waitingForPlayerPanel.activeSelf : gameObject.activeSelf;
+    private bool isPanelOpen = false;
+    public bool IsPanelActive => isPanelOpen && (waitingForPlayerPanel != null ? waitingForPlayerPanel.activeSelf : gameObject.activeSelf);
 
     [Header("Panel References")]
     [SerializeField] private GameObject waitingForPlayerPanel;
@@ -33,7 +34,6 @@ public class WaitingForPlayerPanelManager : MonoBehaviour
     [Header("Settings")]
     [SerializeField] private bool enableBotSimulation = true;
     [SerializeField] private float botJoinInterval = 1.2f;
-    [SerializeField] private bool autoStartWhenFull = false;
 
     private int targetPlayerCount = 5;
     private int currentJoinedCount = 0;
@@ -97,8 +97,13 @@ public class WaitingForPlayerPanelManager : MonoBehaviour
         pendingMatchData = null;
 
         currentJoinedCount = 1;
+        isPanelOpen = true;
 
-        waitingForPlayerPanel.SetActive(true);
+        if (waitingForPlayerPanel != null)
+            waitingForPlayerPanel.SetActive(true);
+        else
+            gameObject.SetActive(true);
+
         RebuildSlots();
         UpdateUI();
 
@@ -107,6 +112,8 @@ public class WaitingForPlayerPanelManager : MonoBehaviour
         MatchmakingModel.OnMatchmakingUpdated += OnMatchmakingUpdated;
         MatchmakingModel.OnMatchFound -= OnMatchFoundFromServer;
         MatchmakingModel.OnMatchFound += OnMatchFoundFromServer;
+        MatchmakingModel.OnMatchmakingFailed -= HandleMatchmakingFailed;
+        MatchmakingModel.OnMatchmakingFailed += HandleMatchmakingFailed;
 
         // ✅ FIX: Trigger actual server matchmaking
         string mode = string.IsNullOrEmpty(matchmakingMode) ? $"{targetPlayerCount}p" : matchmakingMode;
@@ -121,13 +128,37 @@ public class WaitingForPlayerPanelManager : MonoBehaviour
 
     public void CloseWaitingPanel()
     {
+        isPanelOpen = false;
         if (botCoroutine != null) StopCoroutine(botCoroutine);
         ClearSlots();
-        waitingForPlayerPanel.SetActive(false);
+        if (waitingForPlayerPanel != null) waitingForPlayerPanel.SetActive(false);
+        if (gameObject != null && gameObject != waitingForPlayerPanel) gameObject.SetActive(false);
 
         // ✅ FIX: Unsubscribe from matchmaking events to prevent memory leaks / stale calls
         MatchmakingModel.OnMatchmakingUpdated -= OnMatchmakingUpdated;
         MatchmakingModel.OnMatchFound -= OnMatchFoundFromServer;
+        MatchmakingModel.OnMatchmakingFailed -= HandleMatchmakingFailed;
+    }
+
+    private void HandleMatchmakingFailed(string error)
+    {
+        Debug.LogWarning($"[WaitingForPlayerPanelManager] Matchmaking failed: {error}");
+        CloseWaitingPanel();
+
+        if (selectBoardPanel != null)
+        {
+            selectBoardPanel.SetActive(true);
+        }
+        else
+        {
+            HorizontalLobbyManager mgr = HorizontalLobbyManager.Instance != null 
+                ? HorizontalLobbyManager.Instance 
+                : FindFirstObjectByType<HorizontalLobbyManager>(FindObjectsInactive.Include);
+            if (mgr != null)
+            {
+                mgr.OnLobbyOpened();
+            }
+        }
     }
 
     private void RebuildSlots()
@@ -216,7 +247,7 @@ public class WaitingForPlayerPanelManager : MonoBehaviour
             startGameButton.interactable = canStart;
 
         if (readyButtonText != null)
-            readyButtonText.text = isLocalPlayerReady ? "✓ Ready" : "Tap Ready";
+            readyButtonText.text = isLocalPlayerReady ? "Ready" : "Tap Ready";
     }
 
     public void OnReadyClicked()

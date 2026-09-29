@@ -99,6 +99,15 @@ namespace UI
 
         private void Start()
         {
+            // Clear any dummy UI objects left in hierarchy from editor
+            if (itemsContainer != null)
+            {
+                foreach (Transform child in itemsContainer)
+                {
+                    Destroy(child.gameObject);
+                }
+            }
+            
             // Position top-left anchor check
             EnsureTopLeftAnchor();
 
@@ -196,15 +205,29 @@ namespace UI
         /// </summary>
         private void RenderPlayerRows()
         {
-            ClearRows();
-
             if (profileRowPrefab == null || itemsContainer == null) return;
 
-            for (int i = 0; i < currentMatchPlayers.Count; i++)
+            // Ensure we have exactly the right number of row objects instantiated
+            int requiredCount = currentMatchPlayers.Count;
+            
+            // Instantiate missing rows
+            while (spawnedRowObjects.Count < requiredCount)
             {
-                var player = currentMatchPlayers[i];
                 GameObject rowObj = Instantiate(profileRowPrefab, itemsContainer);
                 spawnedRowObjects.Add(rowObj);
+            }
+            
+            // Deactivate extra rows
+            for (int i = 0; i < spawnedRowObjects.Count; i++)
+            {
+                spawnedRowObjects[i].SetActive(i < requiredCount);
+            }
+
+            // Update row data
+            for (int i = 0; i < requiredCount; i++)
+            {
+                var player = currentMatchPlayers[i];
+                GameObject rowObj = spawnedRowObjects[i];
 
                 ProfileDropdownRowUI rowUI = rowObj.GetComponent<ProfileDropdownRowUI>();
                 if (rowUI != null)
@@ -221,9 +244,26 @@ namespace UI
                     if (scoreText != null) scoreText.text = player.score.ToString("N0");
                     if (avatarImg != null && player.avatarSprite != null) avatarImg.sprite = player.avatarSprite;
                 }
+                
+                // Ensure proper sibling index based on sort order
+                rowObj.transform.SetSiblingIndex(i);
             }
 
             RecalculateHeight();
+            
+            // Re-apply current sizing state smoothly if we are updating live
+            if (expandableContentPanel != null)
+            {
+                float collapsedHeight = GetCollapsedHeight();
+                float targetHeight = isExpanded ? Mathf.Max(fullPanelHeight, collapsedHeight) : collapsedHeight;
+                expandableContentPanel.sizeDelta = new Vector2(expandableContentPanel.sizeDelta.x, targetHeight);
+                
+                if (backgroundPanel != null)
+                {
+                    float bgTargetHeight = isExpanded ? (targetHeight + backgroundCollapsedHeight) : (collapsedHeight + backgroundCollapsedHeight);
+                    backgroundPanel.sizeDelta = new Vector2(backgroundPanel.sizeDelta.x, bgTargetHeight);
+                }
+            }
         }
 
         private void RecalculateHeight()
@@ -238,7 +278,17 @@ namespace UI
         private float GetCollapsedHeight()
         {
             if (itemsContainer == null || itemsContainer.childCount == 0) return 0f;
-            int count = Mathf.Min(minProfilesWhenCollapsed, itemsContainer.childCount);
+            
+            // Only count active children for height
+            int activeChildCount = 0;
+            for (int i = 0; i < itemsContainer.childCount; i++)
+            {
+                if (itemsContainer.GetChild(i).gameObject.activeSelf)
+                    activeChildCount++;
+            }
+            
+            int count = Mathf.Min(minProfilesWhenCollapsed, activeChildCount);
+            if (count == 0) return 0f;
             
             float height = 0f;
             var layoutGroup = itemsContainer.GetComponent<UnityEngine.UI.VerticalLayoutGroup>();
@@ -247,11 +297,17 @@ namespace UI
             float paddingBottom = layoutGroup != null ? layoutGroup.padding.bottom : 0f;
 
             height += paddingTop;
-            for(int i = 0; i < count; i++)
+            int counted = 0;
+            for(int i = 0; i < itemsContainer.childCount; i++)
             {
+                if (!itemsContainer.GetChild(i).gameObject.activeSelf) continue;
+                
                 RectTransform rt = itemsContainer.GetChild(i) as RectTransform;
                 if(rt != null) height += rt.rect.height;
-                if(i < count - 1) height += spacing;
+                
+                counted++;
+                if (counted < count) height += spacing;
+                if (counted >= count) break;
             }
             height += paddingBottom;
             return height;
@@ -259,20 +315,7 @@ namespace UI
 
         private void ClearRows()
         {
-            foreach (var row in spawnedRowObjects)
-            {
-                if (row != null) Destroy(row);
-            }
-            spawnedRowObjects.Clear();
-            
-            // Clear any dummy UI objects in hierarchy
-            if (itemsContainer != null)
-            {
-                foreach (Transform child in itemsContainer)
-                {
-                    Destroy(child.gameObject);
-                }
-            }
+            // Now deprecated as we pool rows instead of destroying them
         }
 
         /// <summary>

@@ -19,7 +19,6 @@ public class SelectPlayerPanelController : MonoBehaviour
     [Header("Player Select Buttons")]
     [SerializeField] private Button button3Players;
     [SerializeField] private Button button5Players;
-    [SerializeField] private Button button8Players;
     [SerializeField] private Button button10Players;
 
     [Header("Lobby Integration")]
@@ -50,9 +49,6 @@ public class SelectPlayerPanelController : MonoBehaviour
         if (button5Players != null) 
             button5Players.onClick.AddListener(() => SelectPlayerCount(5));
 
-        if (button8Players != null) 
-            button8Players.onClick.AddListener(() => SelectPlayerCount(8));
-
         if (button10Players != null) 
             button10Players.onClick.AddListener(() => SelectPlayerCount(10));
 
@@ -77,6 +73,9 @@ public class SelectPlayerPanelController : MonoBehaviour
         // Hide select player panel
         HidePanel();
 
+        // 8 players maps to 10 players (Large board) on the backend
+        int normalizedCount = (playerCount == 8) ? 10 : playerCount;
+
         // Set selected player count on Lobby Manager and open Select Board panel
         if (lobbyManager == null)
         {
@@ -85,7 +84,7 @@ public class SelectPlayerPanelController : MonoBehaviour
 
         if (lobbyManager != null)
         {
-            lobbyManager.SelectedPlayerCount = playerCount;
+            lobbyManager.SelectedPlayerCount = normalizedCount;
             
             if (lobbyPanel == null && lobbyManager.gameObject != null)
             {
@@ -107,7 +106,7 @@ public class SelectPlayerPanelController : MonoBehaviour
                 waitingPanel.SetActive(true);
             }
 
-            string mode = $"{playerCount}p";
+            string mode = $"{normalizedCount}p";
             MatchmakingModel.FindMatch(mode, defaultStake, lobbyId);
         }
     }

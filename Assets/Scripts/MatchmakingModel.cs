@@ -49,8 +49,8 @@ public static class MatchmakingModel
             lobbyId = lobbyId
         };
 
-        SocketManager.Instance.Socket.Emit("findMatch", payload);
-        Debug.Log($"<color=#FFA500>⬆️ [Socket EMIT] 'findMatch' for mode '{mode}' with stake {stake} (Lobby: {lobbyId})...</color>");
+        SocketManager.Instance.Socket.Emit("arena:join", payload);
+        Debug.Log($"<color=#FFA500>⬆️ [Socket EMIT] 'arena:join' for mode '{mode}' with stake {stake} (Lobby: {lobbyId})...</color>");
     }
 
     public static void CancelSearch()
@@ -63,8 +63,8 @@ public static class MatchmakingModel
                 lobbyId = lastLobbyId
             };
             
-            SocketManager.Instance.Socket.Emit("cancelMatchmaking", payload);
-            Debug.Log($"<color=#FFA500>⬆️ [Socket EMIT] 'cancelMatchmaking' for Lobby: {lastLobbyId}</color>");
+            SocketManager.Instance.Socket.Emit("arena:leave", payload);
+            Debug.Log($"<color=#FFA500>⬆️ [Socket EMIT] 'arena:leave' for Lobby: {lastLobbyId}</color>");
             
             // DO NOT disconnect the socket here.
             // Disconnecting immediately drops the cancel event before the server processes it,
@@ -94,8 +94,8 @@ public static class MatchmakingModel
         EnsureListenersAdded();
 
         HostArenaPayload payload = new HostArenaPayload { lobbyId = lobbyId, tableName = tableName, stake = stake };
-        SocketManager.Instance.Socket.Emit("hostArena", payload);
-        Debug.Log($"<color=#FFA500>⬆️ [Socket EMIT] 'hostArena' for Lobby: {lobbyId}, Table: {tableName}</color>");
+        SocketManager.Instance.Socket.Emit("arena:host", payload);
+        Debug.Log($"<color=#FFA500>⬆️ [Socket EMIT] 'arena:host' for Lobby: {lobbyId}, Table: {tableName}</color>");
     }
 
     public static void JoinArena(string arenaCode)
@@ -111,9 +111,17 @@ public static class MatchmakingModel
 
         EnsureListenersAdded();
 
-        JoinArenaPayload payload = new JoinArenaPayload { arenaCode = arenaCode };
-        SocketManager.Instance.Socket.Emit("joinArena", payload);
-        Debug.Log($"<color=#FFA500>⬆️ [Socket EMIT] 'joinArena' Code: {arenaCode}</color>");
+        JoinArenaPayload payload = new JoinArenaPayload { code = arenaCode };
+        SocketManager.Instance.Socket.Emit("arena:join_private", payload);
+        Debug.Log($"<color=#FFA500>⬆️ [Socket EMIT] 'arena:join_private' Code: {arenaCode}</color>");
+    }
+
+    public static void CreatePrivateArena(string mode, float entryFee)
+    {
+        if (SocketManager.Instance?.Socket == null) return;
+        EnsureListenersAdded();
+        SocketManager.Instance.Socket.Emit("arena:create_private", new CreatePrivateArenaPayload { mode = mode, entryFee = entryFee });
+        Debug.Log($"<color=#FFA500>⬆️ [Socket EMIT] 'arena:create_private' Mode: {mode}, EntryFee: {entryFee}</color>");
     }
 
     public static void CancelArena(string arenaCode)
@@ -121,8 +129,8 @@ public static class MatchmakingModel
         if (SocketManager.Instance != null && SocketManager.Instance.Socket != null)
         {
             CancelArenaPayload payload = new CancelArenaPayload { arenaCode = arenaCode };
-            SocketManager.Instance.Socket.Emit("cancelArena", payload);
-            Debug.Log($"<color=#FFA500>⬆️ [Socket EMIT] 'cancelArena' Code: {arenaCode}</color>");
+            SocketManager.Instance.Socket.Emit("arena:leave", payload);
+            Debug.Log($"<color=#FFA500>⬆️ [Socket EMIT] 'arena:leave' Code: {arenaCode}</color>");
         }
         IsSearching = false;
     }
@@ -132,7 +140,7 @@ public static class MatchmakingModel
         if (SocketManager.Instance != null && SocketManager.Instance.Socket != null)
         {
             SocketManager.Instance.Socket.Emit("startNow", new StartNowPayload { lobbyId = lobbyId });
-            Debug.Log($"<color=#FFA500>⬆️ [Socket EMIT] 'startNow' for Lobby: {lobbyId}</color>");
+            Debug.Log($"<color=#FFA500>⬆️ [Socket EMIT] 'startNow' for Room: {lobbyId}</color>");
         }
     }
 
@@ -146,29 +154,27 @@ public static class MatchmakingModel
         
         // Use JsonData as the generic type. This is the most stable way to handle 
         // complex JSON in BestHTTP without triggering 'constructor not found' errors.
-        socket.On<BestHTTP.JSON.LitJson.JsonData>("startGame", (jsonData) => {
+        socket.On<BestHTTP.JSON.LitJson.JsonData>("match:found", (jsonData) => {
             try {
                 if (jsonData != null) {
-                    // Convert the raw JsonData to our typed class
                     string json = jsonData.ToJson();
                     StartGameData data = BestHTTP.JSON.LitJson.JsonMapper.ToObject<StartGameData>(json);
                     HandleStartGame(data);
                 }
             } catch (Exception e) {
-                Debug.LogError($"[MatchmakingModel] JsonData parse failed for startGame: {e.Message}");
+                Debug.LogError($"[MatchmakingModel] JsonData parse failed for match:found: {e.Message}");
             }
         });
         
         socket.On<Error>("error", HandleError);
-        socket.On<MatchmakingUpdateData>("matchmakingUpdate", HandleMatchmakingUpdate);
+        socket.On<MatchmakingUpdateData>("match:update", HandleMatchmakingUpdate);
         
-
 
         // Gameplay events
         socket.On<BestHTTP.JSON.LitJson.JsonData>("diceRolled", (jsonData) => {
             if (jsonData != null) {
                 string json = jsonData.ToJson();
-                Debug.Log("<color=#00FFFF>⬇️ [Socket ON] 'diceRolled' raw: " + json + "</color>");
+                Debug.Log("<color=#00FFFF>⬇️ [Socket ON] 'game:dice_rolled' raw: " + json + "</color>");
                 DiceRolledData data = BestHTTP.JSON.LitJson.JsonMapper.ToObject<DiceRolledData>(json);
                 HandleDiceRolled(data);
             }
@@ -177,7 +183,7 @@ public static class MatchmakingModel
         socket.On<BestHTTP.JSON.LitJson.JsonData>("numberLocked", (jsonData) => {
             if (jsonData != null) {
                 string json = jsonData.ToJson();
-                Debug.Log("<color=#00FFFF>⬇️ [Socket ON] 'numberLocked' raw: " + json + "</color>");
+                Debug.Log("<color=#00FFFF>⬇️ [Socket ON] 'game:number_locked' raw: " + json + "</color>");
                 NumberLockedData data = BestHTTP.JSON.LitJson.JsonMapper.ToObject<NumberLockedData>(json);
                 HandleNumberLocked(data);
             }
@@ -186,7 +192,7 @@ public static class MatchmakingModel
         socket.On<BestHTTP.JSON.LitJson.JsonData>("tapResult", (jsonData) => {
             if (jsonData != null) {
                 string json = jsonData.ToJson();
-                Debug.Log("<color=#00FFFF>⬇️ [Socket ON] 'tapResult' raw: " + json + "</color>");
+                Debug.Log("<color=#00FFFF>⬇️ [Socket ON] 'game:tap_result' raw: " + json + "</color>");
                 TapResultData data = BestHTTP.JSON.LitJson.JsonMapper.ToObject<TapResultData>(json);
                 HandleTapResult(data);
             }
@@ -223,7 +229,7 @@ public static class MatchmakingModel
             try {
                 if (jsonData != null) {
                     string json = jsonData.ToJson();
-                    Debug.Log("<color=#00FFFF>⬇️ [Socket ON] 'gameOver' received: " + json + "</color>");
+                    Debug.Log("<color=#00FFFF>⬇️ [Socket ON] 'game:over' received: " + json + "</color>");
                     
                     GameOverData data = BestHTTP.JSON.LitJson.JsonMapper.ToObject<GameOverData>(json);
                     OnGameOverEvent?.Invoke(data);
@@ -233,12 +239,12 @@ public static class MatchmakingModel
             }
         });
 
-        socket.On<BestHTTP.JSON.LitJson.JsonData>("matchRecovered", (jsonData) => {
+        socket.On<BestHTTP.JSON.LitJson.JsonData>("match:recovered", (jsonData) => {
             try {
                 if (jsonData != null) {
                     string json = jsonData.ToJson();
-                    Debug.Log("<color=#FF00FF>🔥 [AUTO-RECOVERY] 'matchRecovered' packet received!</color>");
-                    Debug.Log("<color=#00FFFF>⬇️ [Socket ON] 'matchRecovered' payload: " + json + "</color>");
+                    Debug.Log("<color=#FF00FF>🔥 [AUTO-RECOVERY] 'match:recovered' packet received!</color>");
+                    Debug.Log("<color=#00FFFF>⬇️ [Socket ON] 'match:recovered' payload: " + json + "</color>");
                     
                     // Directly parse into StartGameData as the payload now matches the structure perfectly
                     StartGameData data = BestHTTP.JSON.LitJson.JsonMapper.ToObject<StartGameData>(json);
@@ -250,7 +256,7 @@ public static class MatchmakingModel
                     OnMatchFound?.Invoke(data);
                 }
             } catch (Exception e) {
-                Debug.LogError($"[MatchmakingModel] JsonData parse failed for matchRecovered: {e.Message}");
+                Debug.LogError($"[MatchmakingModel] JsonData parse failed for match:recovered: {e.Message}");
             }
         });
 
@@ -258,7 +264,7 @@ public static class MatchmakingModel
             try {
                 if (jsonData != null) {
                     string json = jsonData.ToJson();
-                    Debug.Log("<color=#00FFFF>⬇️ [Socket ON] 'countdown' received: " + json + "</color>");
+                    Debug.Log("<color=#00FFFF>⬇️ [Socket ON] 'game:countdown' received: " + json + "</color>");
                     CountdownData data = BestHTTP.JSON.LitJson.JsonMapper.ToObject<CountdownData>(json);
                     OnCountdownEvent?.Invoke(data);
                 }
@@ -267,16 +273,42 @@ public static class MatchmakingModel
             }
         });
 
-        socket.On<BestHTTP.JSON.LitJson.JsonData>("arenaHosted", (jsonData) => {
+        socket.On<BestHTTP.JSON.LitJson.JsonData>("arena:hosted", (jsonData) => {
             try {
                 if (jsonData != null) {
                     string json = jsonData.ToJson();
-                    Debug.Log("<color=#00FFFF>⬇️ [Socket ON] 'arenaHosted' received: " + json + "</color>");
+                    Debug.Log("<color=#00FFFF>⬇️ [Socket ON] 'arena:hosted' received: " + json + "</color>");
                     ArenaHostedData data = BestHTTP.JSON.LitJson.JsonMapper.ToObject<ArenaHostedData>(json);
                     OnArenaHostedEvent?.Invoke(data);
                 }
             } catch (Exception e) {
-                Debug.LogError($"[MatchmakingModel] JsonData parse failed for arenaHosted: {e.Message}");
+                Debug.LogError($"[MatchmakingModel] JsonData parse failed for arena:hosted: {e.Message}");
+            }
+        });
+
+        socket.On<BestHTTP.JSON.LitJson.JsonData>("arena:private_created", (jsonData) => {
+            try {
+                if (jsonData != null) {
+                    string json = jsonData.ToJson();
+                    Debug.Log("<color=#00FFFF>⬇️ [Socket ON] 'arena:private_created' received: " + json + "</color>");
+                    PrivateArenaCreatedData data = BestHTTP.JSON.LitJson.JsonMapper.ToObject<PrivateArenaCreatedData>(json);
+                    OnPrivateArenaCreatedEvent?.Invoke(data);
+                }
+            } catch (Exception e) {
+                Debug.LogError($"[MatchmakingModel] JsonData parse failed for arena:private_created: {e.Message}");
+            }
+        });
+
+        socket.On<BestHTTP.JSON.LitJson.JsonData>("arena:private_error", (jsonData) => {
+            try {
+                if (jsonData != null) {
+                    string json = jsonData.ToJson();
+                    Debug.Log("<color=#FF0000>⬇️ [Socket ON] 'arena:private_error' received: " + json + "</color>");
+                    PrivateArenaErrorData data = BestHTTP.JSON.LitJson.JsonMapper.ToObject<PrivateArenaErrorData>(json);
+                    OnMatchmakingFailed?.Invoke(data.message);
+                }
+            } catch (Exception e) {
+                Debug.LogError($"[MatchmakingModel] JsonData parse failed for arena:private_error: {e.Message}");
             }
         });
     }
@@ -354,10 +386,18 @@ public static class MatchmakingModel
                     }
                     else
                     {
-                        Debug.LogWarning("[MatchmakingModel] Active match IDs not found on profile — user may need to rejoin manually.");
-                        OnMatchmakingFailed?.Invoke("Match found but reconnect info missing. Please restart.");
+                        Debug.LogWarning("[MatchmakingModel] Active match IDs not found on profile — clearing stuck search state.");
+                        if (SocketManager.Instance?.Socket != null)
+                        {
+                            SocketManager.Instance.Socket.Emit("cancelMatchmaking", new CancelMatchmakingPayload { lobbyId = "" });
+                        }
+                        OnMatchmakingFailed?.Invoke(msg);
                     }
                 });
+            }
+            else
+            {
+                OnMatchmakingFailed?.Invoke(msg);
             }
             return;
         }
@@ -404,6 +444,7 @@ public static class MatchmakingModel
     public static event Action<GameOverData> OnGameOverEvent;
     public static event Action<CountdownData> OnCountdownEvent;
     public static event Action<string> OnSocketErrorEvent;
+    public static event Action<PrivateArenaCreatedData> OnPrivateArenaCreatedEvent;
 
     public static void RequestDiceRoll(string roomId)
     {
@@ -411,7 +452,7 @@ public static class MatchmakingModel
 
         RollDiceRequestPayload payload = new RollDiceRequestPayload { roomId = roomId };
         SocketManager.Instance.Socket.Emit("rollDiceRequest", payload);
-        Debug.Log($"<color=#FFA500>⬆️ [Socket EMIT] 'rollDiceRequest' for room {roomId}</color>");
+        Debug.Log($"<color=#FFA500>⬆️ [Socket EMIT] 'game:roll' for room {roomId}</color>");
     }
 
     private static void HandleDiceRolled(DiceRolledData data)
@@ -432,7 +473,7 @@ public static class MatchmakingModel
             sequence = sequence
         };
         SocketManager.Instance.Socket.Emit("tapNumber", payload);
-        Debug.Log($"<color=#FFA500>⬆️ [Socket EMIT] 'tapNumber' for room {roomId} | index={index}, val={val}, seq={sequence}</color>");
+        Debug.Log($"<color=#FFA500>⬆️ [Socket EMIT] 'game:tap' for room {roomId} | index={index}, val={val}, seq={sequence}</color>");
     }
 
     private static void HandleNumberLocked(NumberLockedData data)
@@ -503,7 +544,7 @@ public static class MatchmakingModel
             Debug.Log($"<color=#FFA500>⬆️ [Socket EMIT] 'joinRoom' before forfeit for room {roomId}</color>");
         }
 
-        Debug.Log($"<color=#FFA500>⬆️ [Socket EMIT] 'forfeitMatch' for Room: {roomId}</color>");
+        Debug.Log($"<color=#FFA500>⬆️ [Socket EMIT] 'game:forfeit' for Room: {roomId}</color>");
         SocketManager.Instance.Socket.Emit("forfeitMatch", new ForfeitMatchPayload { roomId = roomId });
     }
 
@@ -664,7 +705,33 @@ public class HostArenaPayload
 [Serializable]
 public class JoinArenaPayload
 {
-    public string arenaCode;
+    public string code;
+}
+
+[Serializable]
+public class CreatePrivateArenaPayload
+{
+    public string mode;
+    public float entryFee;
+}
+
+[Serializable]
+public class PrivateArenaCreatedData
+{
+    public string code;
+    public string roomId;
+}
+
+[Serializable]
+public class PrivateArenaErrorData
+{
+    public string message;
+}
+
+[Serializable]
+public class GameReadyPayload
+{
+    public string roomId;
 }
 
 [Serializable]

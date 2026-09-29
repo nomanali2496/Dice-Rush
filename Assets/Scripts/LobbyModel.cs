@@ -8,6 +8,13 @@ using UnityEngine;
 /// </summary>
 public static class LobbyModel
 {
+    public static readonly string[] StandardBoardNames = new string[] {
+        "Monaco Riviera", "Atlantic Boardwalk", "Macau Dragon", "Vegas Neon", 
+        "Singapore Marina", "London Royal", "Player's Arena"
+    };
+
+    public static int StandardBoardCount => StandardBoardNames.Length;
+
     public static LobbyConfig[] Configurations { get; private set; } = new LobbyConfig[0];
     public static bool IsLoaded { get; private set; } = false;
     
@@ -17,22 +24,25 @@ public static class LobbyModel
     // Static constructor
     static LobbyModel()
     {
-        InitializeDefaults(12);
+        InitializeDefaults(7);
     }
 
-    public static void InitializeDefaults(int count = 12)
+    public static void InitializeDefaults(int count = 7)
     {
         Configurations = new LobbyConfig[count];
-        int[] playerCounts = new int[] { 3, 5, 8, 10 };
-        int[] entryFees = new int[] { 100, 250, 500, 1000, 2500, 5000, 10000, 25000, 50000, 100000, 250000, 500000 };
-
-        string[] defaultLobbyIds = new string[] { "combo-dice", "dice-island", "dice-race", "dice-royale", "golden-throw", "lucky-rollers" };
+        
+        // Match Entry & Economy from FRD
+        int[] entryFees = new int[] { 100, 300, 500, 1000, 2500, 5000, 10000, 25000, 50000, 100000, 250000, 500000 };
+        string[] lobbyNames = StandardBoardNames;
+        // Small = 3, Medium = 5, Large = 10
+        int[] playerCounts = new int[] { 3, 3, 5, 5, 10, 10, 10, 10, 10, 10, 10, 10 };
 
         for (int i = 0; i < count; i++)
         {
             int pCount = playerCounts[i % playerCounts.Length];
             int fee = entryFees[i % entryFees.Length];
-            int reward = fee * pCount;
+            // Prize pool is roughly 95%, we'll just set firstChips to a dummy value here as backend controls real payout
+            int reward = (int)(fee * pCount * 0.95f);
 
             LobbyConfig cfg = new LobbyConfig(
                 index: i,
@@ -47,8 +57,8 @@ public static class LobbyModel
                 thirdChips: 0,
                 duration: 60f
             );
-            cfg.lobbyName = $"Board {i + 1}";
-            cfg.lobbyId = defaultLobbyIds[i % defaultLobbyIds.Length];
+            cfg.lobbyName = lobbyNames[i % lobbyNames.Length];
+            cfg.lobbyId = lobbyNames[i % lobbyNames.Length].ToLower().Replace(" ", "-");
             cfg.mode = $"{pCount}p";
             Configurations[i] = cfg;
         }
@@ -63,7 +73,7 @@ public static class LobbyModel
     {
         if (Configurations == null || Configurations.Length == 0)
         {
-            InitializeDefaults(12);
+            InitializeDefaults(7);
         }
 
         if (BackendAuthService.Instance != null)
@@ -79,7 +89,7 @@ public static class LobbyModel
                     Debug.LogWarning("[LobbyModel] Failed to fetch configurations from API. Using local defaults.");
                     if (Configurations == null || Configurations.Length == 0)
                     {
-                        InitializeDefaults(12);
+                        InitializeDefaults(7);
                     }
                     OnConfigurationsUpdated?.Invoke();
                 }
@@ -90,7 +100,7 @@ public static class LobbyModel
             Debug.LogWarning("[LobbyModel] BackendAuthService not found! Using local default configurations.");
             if (Configurations == null || Configurations.Length == 0)
             {
-                InitializeDefaults(12);
+                InitializeDefaults(7);
             }
             OnConfigurationsUpdated?.Invoke();
         }
@@ -112,13 +122,17 @@ public static class LobbyModel
         {
             var apiConfig = enabledData[i];
 
+            // Assign standard board index 0..11 if matching, otherwise fallback to array index
+            int boardIdx = Array.IndexOf(StandardBoardNames, apiConfig.name);
+            int assignedLobbyIndex = boardIdx >= 0 ? boardIdx : i;
+
             LobbyConfig newConfig = new LobbyConfig(
-                i,
+                assignedLobbyIndex,
                 apiConfig.playerCount,
-                apiConfig.entryFeeCash,
-                apiConfig.entryFeeCoins,
-                apiConfig.firstPlaceCash,
-                apiConfig.firstPlaceCoins,
+                apiConfig.entryFeeCash > 0 ? apiConfig.entryFeeCash : apiConfig.stake,
+                apiConfig.entryFeeCoins > 0 ? apiConfig.entryFeeCoins : apiConfig.stakeCoins,
+                apiConfig.firstPlaceCash > 0 ? apiConfig.firstPlaceCash : apiConfig.prizePool,
+                apiConfig.firstPlaceCoins > 0 ? apiConfig.firstPlaceCoins : apiConfig.prizePoolCoins,
                 apiConfig.secondPlaceCash,
                 apiConfig.secondPlaceCoins,
                 apiConfig.thirdPlaceCash,
@@ -149,6 +163,60 @@ public static class LobbyModel
             return Configurations[index];
         }
         return null;
+    }
+
+    /// <summary>
+    /// Gets the configuration for a standard board (0..11) given the desired player count (3, 5, 8, 10).
+    /// Filters to non-arena presets and finds the exact variant matching the player count.
+    /// </summary>
+    public static LobbyConfig GetBoardConfig(int boardIndex, int playerCount)
+    {
+        if (boardIndex < 0 || boardIndex >= StandardBoardNames.Length) return null;
+        string boardName = StandardBoardNames[boardIndex];
+
+        // SPECIAL CASE: Private Table (Player's Arena) doesn't have 3p/5p/10p variants and is an Arena preset.
+        // So we just return it exactly as is, regardless of the selected player count.
+        if (boardName == "Player's Arena")
+        {
+            if (Configurations != null)
+            {
+                for (int i = 0; i < Configurations.Length; i++)
+                {
+                    if (Configurations[i] != null && Configurations[i].lobbyName == boardName)
+                    {
+                        return Configurations[i];
+                    }
+                }
+            }
+        }
+
+        // 8 players maps to 10 players (Large board) on the backend
+        int targetPlayers = (playerCount <= 3) ? 3 : (playerCount <= 5 ? 5 : 10);
+
+        if (Configurations != null && Configurations.Length > 0)
+        {
+            // 1. Exact match on non-arena board name + target player count
+            for (int i = 0; i < Configurations.Length; i++)
+            {
+                var cfg = Configurations[i];
+                if (cfg != null && !cfg.isArenaPreset && cfg.lobbyName == boardName && cfg.numberOfPlayers == targetPlayers)
+                {
+                    return cfg;
+                }
+            }
+
+            // 2. Fallback: match non-arena board name
+            for (int i = 0; i < Configurations.Length; i++)
+            {
+                var cfg = Configurations[i];
+                if (cfg != null && !cfg.isArenaPreset && cfg.lobbyName == boardName)
+                {
+                    return cfg;
+                }
+            }
+        }
+
+        return GetConfig(boardIndex);
     }
 
     /// <summary>

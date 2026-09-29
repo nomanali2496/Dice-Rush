@@ -227,62 +227,102 @@ public class MightyTasksPanelManager : MonoBehaviour
 
         if (taskCards == null || taskCards.Length == 0) return;
 
-        for (int i = 0; i < taskCards.Length; i++)
+        // Fetch from backend
+        if (BackendAuthService.Instance != null && BackendAuthService.HasStoredJWT())
         {
-            if (taskCards[i] == null) continue;
-
-            int taskDataIndex = i % defaultWeeklyTasks.Count;
-            TaskData baseData = defaultWeeklyTasks[taskDataIndex];
-
-            // Load saved task state from PlayerPrefs
-            TaskData taskInstance = new TaskData()
+            BackendAuthService.Instance.GetWeeklyTasks((success, response) =>
             {
-                taskId = baseData.taskId,
-                title = baseData.title,
-                description = baseData.description,
-                targetProgress = baseData.targetProgress,
-                rewardChips = baseData.rewardChips,
-                rewardCash = baseData.rewardCash,
-                taskIcon = baseData.taskIcon,
-                currentProgress = PlayerPrefs.GetInt(TaskProgressKeyPrefix + baseData.taskId, 0),
-                isClaimed = PlayerPrefs.GetInt($"MightyTask_Claimed_{baseData.taskId}", 0) == 1
-            };
+                if (success && response != null && response.data != null && response.data.tasks != null)
+                {
+                    var backendTasks = response.data.tasks;
+                    for (int i = 0; i < taskCards.Length; i++)
+                    {
+                        if (taskCards[i] == null) continue;
 
-            taskInstance.currentProgress = Mathf.Clamp(taskInstance.currentProgress, 0, taskInstance.targetProgress);
+                        if (i < backendTasks.Length)
+                        {
+                            var bTask = backendTasks[i];
+                            TaskData taskInstance = new TaskData()
+                            {
+                                taskId = bTask.taskId,
+                                title = bTask.title,
+                                description = "Weekly Task: " + bTask.type.Replace("_", " "),
+                                targetProgress = bTask.target,
+                                currentProgress = bTask.progress,
+                                rewardChips = bTask.reward,
+                                rewardCash = 0f, // Weekly tasks reward coins/chips
+                                isClaimed = bTask.claimed
+                            };
 
-            taskCards[i].SetupTask(taskInstance, OnClaimTaskClicked, OnGoTaskClicked);
+                            // Try to map icon from defaults if one exists
+                            TaskData defaultTask = defaultWeeklyTasks.Find(t => t.taskId == bTask.taskId);
+                            if (defaultTask != null)
+                            {
+                                taskInstance.taskIcon = defaultTask.taskIcon;
+                            }
+                            else if (defaultWeeklyTasks.Count > 0)
+                            {
+                                taskInstance.taskIcon = defaultWeeklyTasks[0].taskIcon; // fallback
+                            }
+
+                            taskCards[i].gameObject.SetActive(true);
+                            taskCards[i].SetupTask(taskInstance, OnClaimTaskClicked, OnGoTaskClicked);
+                        }
+                        else
+                        {
+                            // Hide unused card slots
+                            taskCards[i].gameObject.SetActive(false);
+                        }
+                    }
+                }
+                else
+                {
+                    Debug.LogWarning("[MightyTasksPanelManager] Failed to load weekly tasks from backend.");
+                }
+            });
+        }
+        else
+        {
+            Debug.LogWarning("[MightyTasksPanelManager] User not logged in, cannot fetch weekly tasks.");
         }
     }
 
     public void AddTaskProgress(string taskId, int amount)
     {
-        if (string.IsNullOrEmpty(taskId) || amount <= 0) return;
-
-        TaskData task = defaultWeeklyTasks.Find(item => item.taskId == taskId);
-        if (task == null) return;
-
-        int currentProgress = PlayerPrefs.GetInt(TaskProgressKeyPrefix + taskId, 0);
-        currentProgress = Mathf.Clamp(currentProgress + amount, 0, task.targetProgress);
-        PlayerPrefs.SetInt(TaskProgressKeyPrefix + taskId, currentProgress);
-        PlayerPrefs.Save();
-
-        if (isActiveAndEnabled)
-        {
-            PopulateWeeklyTasks();
-        }
+        // Weekly tasks progress is now handled strictly SERVER-SIDE 
+        // by the backend match settlement worker. Client should not spoof it.
+        Debug.Log("[MightyTasksPanelManager] AddTaskProgress ignored. Progress is managed server-side.");
     }
 
     private void OnClaimTaskClicked(TaskData task)
     {
         if (task == null) return;
 
-        Debug.Log($"<color=#00FF00>🎁 [MightyTasks] Task Claimed: {task.title} (+{task.rewardChips} Chips, +${task.rewardCash:F2})</color>");
-        PlayerPrefs.SetInt($"MightyTask_Claimed_{task.taskId}", 1);
-        PlayerPrefs.SetInt(TaskProgressKeyPrefix + task.taskId, task.targetProgress);
-        PlayerPrefs.Save();
+        Debug.Log($"<color=#00FF00>🎁 [MightyTasks] Requesting Claim for: {task.title}...</color>");
+        
+        if (BackendAuthService.Instance != null)
+        {
+            BackendAuthService.Instance.ClaimWeeklyTask(task.taskId, (success, response) =>
+            {
+                if (success && response != null && response.success)
+                {
+                    Debug.Log($"<color=#00FF00>✅ [MightyTasks] Task Claimed from backend!</color>");
+                    
+                    // Refresh user profile from backend to update UI correctly
+                    BackendAuthService.Instance.GetProfile((pSuccess, pMsg) => {
+                        // GetProfile automatically updates PlayerModel and fires OnDataUpdated events
+                        // so all Currency UIs will update themselves automatically.
+                    });
 
-        // Refresh UI
-        PopulateWeeklyTasks();
+                    // Refresh tasks list
+                    PopulateWeeklyTasks();
+                }
+                else
+                {
+                    Debug.LogWarning("[MightyTasksPanelManager] Failed to claim task from backend.");
+                }
+            });
+        }
     }
 
     private void OnGoTaskClicked(TaskData task)

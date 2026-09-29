@@ -114,7 +114,7 @@ public class WaitingPlayerSlotUI : MonoBehaviour
 
         if (statusText != null)
         {
-            statusText.text = isReady ? "✓ Ready" : "Not Ready";
+            statusText.text = isReady ? "Ready" : "Not Ready";
         }
     }
 

@@ -53,6 +53,7 @@ public class ArenaHostJoinPanel : MonoBehaviour
     private void OnEnable()
     {
         MatchmakingModel.OnArenaHostedEvent += OnArenaHosted;
+        MatchmakingModel.OnPrivateArenaCreatedEvent += OnPrivateArenaCreated;
         MatchmakingModel.OnMatchmakingFailed += OnMatchmakingFailed;
         MatchmakingModel.OnMatchFound += OnMatchFound;
     }
@@ -60,6 +61,7 @@ public class ArenaHostJoinPanel : MonoBehaviour
     private void OnDisable()
     {
         MatchmakingModel.OnArenaHostedEvent -= OnArenaHosted;
+        MatchmakingModel.OnPrivateArenaCreatedEvent -= OnPrivateArenaCreated;
         MatchmakingModel.OnMatchmakingFailed -= OnMatchmakingFailed;
         MatchmakingModel.OnMatchFound -= OnMatchFound;
     }
@@ -98,6 +100,17 @@ public class ArenaHostJoinPanel : MonoBehaviour
         MatchmakingModel.HostArena(currentLobbyId, tableName, currentStake);
     }
 
+    // Called by a UI Button when user selects "Host Private Arena"
+    public void StartPrivateHostFlow()
+    {
+        if (mainActionPanel) mainActionPanel.SetActive(false);
+        if (hostPanel) hostPanel.SetActive(true);
+        
+        if (generatedCodeText) generatedCodeText.text = "Generating Private Code...";
+        
+        MatchmakingModel.CreatePrivateArena(currentLobbyId, currentStake); // Assuming currentLobbyId maps to mode
+    }
+
     // Called by a UI Button when user selects "Join Arena"
     public void StartJoinFlow()
     {
@@ -113,6 +126,13 @@ public class ArenaHostJoinPanel : MonoBehaviour
         currentArenaCode = data.arenaCode;
         if (generatedCodeText) generatedCodeText.text = data.arenaCode;
         Debug.Log($"[ArenaHostJoinPanel] Arena Hosted successfully. Code: {data.arenaCode}");
+    }
+
+    private void OnPrivateArenaCreated(PrivateArenaCreatedData data)
+    {
+        currentArenaCode = data.code;
+        if (generatedCodeText) generatedCodeText.text = data.code;
+        Debug.Log($"[ArenaHostJoinPanel] Private Arena Created successfully. Code: {data.code}");
     }
 
     private void OnCopyCodeClicked()

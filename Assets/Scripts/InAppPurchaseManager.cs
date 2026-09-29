@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
@@ -112,7 +112,39 @@ public class InAppPurchaseManager : MonoBehaviour
         if (!string.IsNullOrEmpty(Application.absoluteURL))
             OnDeepLinkActivated(Application.absoluteURL);
 
+        FetchDynamicPackages();
         OnPurchaseInitialized?.Invoke();
+    }
+
+    private void FetchDynamicPackages()
+    {
+        if (BackendAuthService.Instance == null) return;
+
+        BackendAuthService.Instance.GetShopItems((success, response) =>
+        {
+            if (success && response != null && response.data != null)
+            {
+                foreach (var item in response.data)
+                {
+                    for (int i = 0; i < purchasePackages.Length; i++)
+                    {
+                        if (purchasePackages[i].productId == item.id)
+                        {
+                            purchasePackages[i].price = item.price;
+                            purchasePackages[i].chipsAmount = item.chipsAmount;
+                            purchasePackages[i].cashAmount = item.cashAmount;
+                            purchasePackages[i].cashBonus = item.cashBonus;
+                            break;
+                        }
+                    }
+                }
+                Debug.Log("<color=#00FF00>[InAppPurchaseManager] Successfully fetched dynamic shop packages from backend.</color>");
+            }
+            else
+            {
+                Debug.LogWarning("[InAppPurchaseManager] Failed to fetch shop packages. Falling back to hardcoded defaults.");
+            }
+        });
     }
 
     private void OnDestroy()

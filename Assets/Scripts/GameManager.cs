@@ -90,7 +90,13 @@ public class GameManager : MonoBehaviour
         new Color(0.45f, 0.05f, 0.05f), // Macau Dragon (Red)
         new Color(0.15f, 0.15f, 0.15f), // Vegas Neon (Black)
         new Color(0.45f, 0.35f, 0.15f), // Singapore Marina (Gold)
-        new Color(0.35f, 0.35f, 0.35f)  // London Royal (Gray)
+        new Color(0.35f, 0.35f, 0.35f), // London Royal (Gray)
+        new Color(0.5f, 0.4f, 0.1f),    // Melbourne Gold (Gold variant)
+        new Color(0.1f, 0.1f, 0.3f),    // Monte Carlo Prestige (Deep Indigo)
+        new Color(0.2f, 0.0f, 0.0f),    // Vegas High Stakes (Dark Red)
+        new Color(0.4f, 0.1f, 0.3f),    // Macau Imperial (Purple)
+        new Color(0.6f, 0.6f, 0.6f),    // Monte Carlo Elite (Silver/White)
+        new Color(0.0f, 0.0f, 0.0f)     // Vegas High Roller (Pitch Black)
     };
     
     // Win conditions
@@ -827,10 +833,10 @@ public class GameManager : MonoBehaviour
             Debug.Log("[GameManager] Started powerup timer for player grid");
         }
         
-        // Start all opponent powerup timers
+        // Start all active opponent powerup timers
         foreach (var kvp in opponentNumberGrids)
         {
-            if (kvp.Value != null)
+            if (kvp.Value != null && kvp.Value.gameObject.activeInHierarchy)
             {
                 kvp.Value.StartPowerupTimerFromGameManager();
                 Debug.Log($"[GameManager] Started powerup timer for Opponent {kvp.Key} grid");
@@ -1882,7 +1888,10 @@ public class GameManager : MonoBehaviour
         {
             int reqPlayers = (config != null && config.numberOfPlayers > 0) ? config.numberOfPlayers : 3;
             Debug.LogWarning($"[GameManager] matchData is null! Auto-generating fallback matchData for {reqPlayers} players.");
-            matchData = CreateFallbackMatchData(reqPlayers, config != null ? (config.entryFeeCash > 0 ? config.entryFeeCash : config.entryFeeChips) : 100f);
+            matchData = CreateFallbackMatchData(reqPlayers, config != null ? 
+                (config.isArenaPreset ? 
+                    (config.entryFeeCash > 0 ? config.entryFeeCash : config.entryFeeChips) : 
+                    (config.entryFeeChips > 0 ? config.entryFeeChips : config.entryFeeCash)) : 100f);
         }
         currentMatchData = matchData;
 
@@ -2094,7 +2103,10 @@ public class GameManager : MonoBehaviour
         }
 
         // Calculate earnings for winner
-        float stake = currentLobbyConfig != null ? (currentLobbyConfig.entryFeeCash > 0 ? currentLobbyConfig.entryFeeCash : currentLobbyConfig.entryFeeChips) : 100f;
+        float stake = currentLobbyConfig != null ? 
+            (currentLobbyConfig.isArenaPreset ? 
+                (currentLobbyConfig.entryFeeCash > 0 ? currentLobbyConfig.entryFeeCash : currentLobbyConfig.entryFeeChips) : 
+                (currentLobbyConfig.entryFeeChips > 0 ? currentLobbyConfig.entryFeeChips : currentLobbyConfig.entryFeeCash)) : 100f;
         int totalPlayers = data.players.Count > 0 ? data.players.Count : 3;
         double prize = stake * totalPlayers;
 

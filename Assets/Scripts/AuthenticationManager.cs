@@ -32,6 +32,7 @@ public class AuthenticationManager : MonoBehaviour
     [SerializeField] private Button googleLoginButton;
     [SerializeField] private Button facebookLoginButton;
     [SerializeField] private Button appleLoginButton;
+    [SerializeField] private Button discordLoginButton;
     [SerializeField] private Toggle loginPasswordToggle;
     
     [Header("Registration UI")]
@@ -44,6 +45,7 @@ public class AuthenticationManager : MonoBehaviour
     [SerializeField] private Button registerGoogleButton;
     [SerializeField] private Button registerFacebookButton;
     [SerializeField] private Button registerAppleButton;
+    [SerializeField] private Button registerDiscordButton;
     
     [Header("Forgot Password UI")]
     [SerializeField] private GameObject forgotPasswordSection;
@@ -110,6 +112,12 @@ public class AuthenticationManager : MonoBehaviour
             
         if (registerAppleButton != null)
             registerAppleButton.onClick.AddListener(OnAppleLoginClicked);
+            
+        if (discordLoginButton != null)
+            discordLoginButton.onClick.AddListener(OnDiscordLoginClicked);
+            
+        if (registerDiscordButton != null)
+            registerDiscordButton.onClick.AddListener(OnDiscordLoginClicked);
         
         if (switchToRegisterButton != null)
             switchToRegisterButton.onClick.AddListener(() => ShowRegisterSection());
@@ -240,6 +248,14 @@ public class AuthenticationManager : MonoBehaviour
             GameObject facebookSignInObj = new GameObject("FacebookSignInManager");
             facebookSignInObj.AddComponent<FacebookSignInManager>();
             Debug.Log("FacebookSignInManager initialized");
+        }
+        
+        // Initialize DiscordAuthManager if it doesn't exist
+        if (DiscordAuthManager.Instance == null)
+        {
+            GameObject discordAuthObj = new GameObject("DiscordAuthManager");
+            discordAuthObj.AddComponent<DiscordAuthManager>();
+            Debug.Log("DiscordAuthManager initialized");
         }
     }
     
@@ -579,11 +595,14 @@ public class AuthenticationManager : MonoBehaviour
                 }
             });
         }
-        isAttemptingAutoLogin = false;
-        ShowLoginRegisterPanel();
-        ShowLoginSection();
-        SetLoadingState(false);
-        UpdateStatusText("");
+        else
+        {
+            isAttemptingAutoLogin = false;
+            ShowLoginRegisterPanel();
+            ShowLoginSection();
+            SetLoadingState(false);
+            UpdateStatusText("");
+        }
     }
     
     #region Panel Management
@@ -625,15 +644,28 @@ public class AuthenticationManager : MonoBehaviour
             registerSection.SetActive(false);
     }
     
+    private Coroutine loadingScreenTimeoutCoroutine;
+
     /// <summary>
-    /// Shows the loading screen (covers everything)
+    /// Shows the loading screen (covers everything) with a safety timeout to prevent permanent lockup
     /// </summary>
-    private void ShowLoadingScreen()
+    private void ShowLoadingScreen(float timeout = 7.0f)
     {
         if (loadingScreen != null)
             loadingScreen.SetActive(true);
         else if (loadingScreenPanel != null)
             loadingScreenPanel.SetActive(true);
+
+        if (loadingScreenTimeoutCoroutine != null) StopCoroutine(loadingScreenTimeoutCoroutine);
+        loadingScreenTimeoutCoroutine = StartCoroutine(LoadingScreenSafetyTimeoutRoutine(timeout));
+    }
+
+    private System.Collections.IEnumerator LoadingScreenSafetyTimeoutRoutine(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        Debug.LogWarning("[AuthenticationManager] Loading screen safety timeout reached. Auto-hiding loading screen.");
+        HideLoadingScreen();
+        loadingScreenTimeoutCoroutine = null;
     }
     
     /// <summary>
@@ -641,6 +673,12 @@ public class AuthenticationManager : MonoBehaviour
     /// </summary>
     private void HideLoadingScreen()
     {
+        if (loadingScreenTimeoutCoroutine != null)
+        {
+            StopCoroutine(loadingScreenTimeoutCoroutine);
+            loadingScreenTimeoutCoroutine = null;
+        }
+
         if (loadingScreen != null)
             loadingScreen.SetActive(false);
         else if (loadingScreenPanel != null)
@@ -1100,6 +1138,24 @@ public class AuthenticationManager : MonoBehaviour
         }
     }
     
+    private void OnDiscordLoginClicked()
+    {
+        if (!CheckInternetAndAction(OnDiscordLoginClicked)) return;
+        
+        UpdateStatusText("");
+        SetLoadingState(true);
+        
+        if (DiscordAuthManager.Instance != null)
+        {
+            DiscordAuthManager.Instance.StartDiscordLogin();
+        }
+        else
+        {
+            UpdateStatusText("Error: DiscordAuthManager not found!");
+            SetLoadingState(false);
+        }
+    }
+    
     private void HandleAppleLoginResponse(bool success, string token, string displayName)
     {
         if (success)
@@ -1503,6 +1559,53 @@ public class AuthenticationManager : MonoBehaviour
         if (url.Contains("reset-password"))
         {
             Debug.Log("[AuthenticationManager] Reset password deep link ignored because reset is now handled via web page.");
+        }
+        else if (url.Contains("discord-callback"))
+        {
+            string code = ParseQueryParam(url, "code");
+            if (!string.IsNullOrEmpty(code))
+            {
+                Debug.Log("[AuthenticationManager] Discord Auth Code received.");
+                ShowLoadingScreen();
+                UpdateStatusText("Logging in with Discord...");
+                
+                string redirectUri = "https://game.winjogames.com/discord-callback";
+                
+                // Determine if we want to link discord or just login
+                // Assuming login for AuthenticationManager
+                BackendAuthService.Instance.DiscordLogin(code, redirectUri, (success, msg) => 
+                {
+                    if (success)
+                    {
+                        Debug.Log("[AuthenticationManager] Discord Login successful");
+                        
+                        BackendAuthService.Instance.GetProfile((profileSuccess, profileMsg) => 
+                        {
+                            if (profileSuccess)
+                            {
+                                HideLoginScreen();
+                                ShowSplashScreenPanel();
+                                SetLoadingState(false);
+                                OnAuthenticationSuccess?.Invoke();
+                            }
+                            else
+                            {
+                                UpdateStatusText("Failed to get profile: " + profileMsg);
+                                HideLoadingScreen();
+                            }
+                        });
+                    }
+                    else
+                    {
+                        UpdateStatusText("Discord login failed: " + msg);
+                        HideLoadingScreen();
+                    }
+                });
+            }
+            else
+            {
+                Debug.LogWarning("[AuthenticationManager] Discord callback missing 'code' parameter.");
+            }
         }
     }
     
