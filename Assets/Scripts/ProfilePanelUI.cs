@@ -4,6 +4,7 @@ using TMPro;
 
 public class ProfilePanelUI : MonoBehaviour
 {
+    public static ProfilePanelUI Instance { get; private set; }
     [Header("Profile Card Info")]
     [SerializeField] private Image profileIcon;
     [SerializeField] private Image frameIcon; // Added for frame
@@ -38,6 +39,11 @@ public class ProfilePanelUI : MonoBehaviour
     private bool isSelfView = true;
     private bool isNameEditMode = false;
     private string originalPlayerName = "";
+
+    private void Awake()
+    {
+        if (Instance == null) Instance = this;
+    }
 
     private void Start()
     {
@@ -122,36 +128,84 @@ public class ProfilePanelUI : MonoBehaviour
     }
 
     /// <summary>
-    /// Setup the profile panel for another player (Other Player View)
+    /// Open the profile panel and fetch data for another player.
     /// </summary>
-    public void SetupForOtherPlayer(OtherProfileData data)
+    public void OpenPublicProfile(string userId)
     {
+        gameObject.SetActive(true);
         isSelfView = false;
         ToggleEditElements(false);
-        if (addFriendButton != null) addFriendButton.gameObject.SetActive(true);
-
-        currentPlayerId = data.id;
-
-        if (playerNameInputField != null) 
+        if (addFriendButton != null) 
         {
-            playerNameInputField.text = data.name;
-            playerNameInputField.interactable = false;
+            if (userId == PlayerModel.Id)
+            {
+                addFriendButton.gameObject.SetActive(false);
+            }
+            else
+            {
+                addFriendButton.gameObject.SetActive(true);
+                addFriendButton.interactable = false; // Disable until we know if it's already liked
+            }
         }
-        if (playerIdText != null) playerIdText.text = data.id;
         
-        if (totalWinsText != null) totalWinsText.text = data.wins.ToString();
-        if (currentChipsText != null) currentChipsText.text = data.chips.ToString();
-        if (gamesPlayedText != null) gamesPlayedText.text = data.gamesPlayed.ToString();
+        currentPlayerId = userId;
         
-        if (playerLikesText != null) playerLikesText.text = data.likes.ToString();
-        if (winStreakText != null) winStreakText.text = data.winStreak.ToString();
-        if (totalScoreText != null) totalScoreText.text = data.totalScore.ToString();
-        if (rankText != null) rankText.text = "#" + data.rank;
-        if (leagueText != null) leagueText.text = data.league;
-        if (countryText != null) countryText.text = data.country;
-        if (loginStreakText != null) loginStreakText.text = data.loginStreak.ToString();
+        // Show loading state if applicable (can reset text to "...")
+        if (playerNameInputField != null) playerNameInputField.text = "Loading...";
+        
+        BackendAuthService.Instance.GetPublicProfile(userId, (success, response) => 
+        {
+            if (success && response != null && response.data != null)
+            {
+                var data = response.data;
+                if (playerNameInputField != null) 
+                {
+                    playerNameInputField.text = data.name;
+                    playerNameInputField.interactable = false;
+                }
+                if (playerIdText != null) playerIdText.text = data.id;
+                
+                if (totalWinsText != null) totalWinsText.text = data.wins.ToString();
+                // Since this is coin-based, chips map to gamesPlayed or similar, but wait, data doesn't have chips in public profile. 
+                // We will leave currentChipsText untouched or hide it.
+                if (gamesPlayedText != null) gamesPlayedText.text = data.gamesPlayed.ToString();
+                
+                if (playerLikesText != null) playerLikesText.text = data.likesReceived.ToString();
+                if (winStreakText != null) winStreakText.text = data.winStreak.ToString();
+                if (totalScoreText != null) totalScoreText.text = data.xp.ToString(); // using xp as totalScore for now
+                if (rankText != null) rankText.text = "#-"; // Rank requires leaderboard context, keeping placeholder
+                if (leagueText != null) leagueText.text = data.league;
+                if (countryText != null) countryText.text = data.country;
+                if (loginStreakText != null) loginStreakText.text = "-"; 
+                
+                if (addFriendButton != null)
+                {
+                    addFriendButton.interactable = !data.alreadyLiked;
+                }
 
-        UpdateAvatarDisplay(data.avatarUrl);
+                UpdateAvatarDisplay(data.avatar);
+                
+                // Update frame
+                if (frameIcon != null && AvatarSelector.Instance != null)
+                {
+                    int frameIndex = int.TryParse(data.profileFrame, out int parsedFrame) ? parsedFrame : 0;
+                    Sprite frameSprite = AvatarSelector.Instance.GetBackgroundSpriteByIndex(frameIndex);
+                    if (frameSprite != null)
+                    {
+                        frameIcon.sprite = frameSprite;
+                        frameIcon.gameObject.SetActive(true);
+                    }
+                    else
+                    {
+                        frameIcon.gameObject.SetActive(false);
+                    }
+                }
+            }
+            else
+            {
+                if (playerNameInputField != null) playerNameInputField.text = "Error loading";
+            }
+        });
     }
 
     private void ToggleEditElements(bool state)
@@ -214,8 +268,23 @@ public class ProfilePanelUI : MonoBehaviour
 
     private void OnAddFriendClicked()
     {
-        Debug.Log($"Add friend clicked for ID: {currentPlayerId}");
-        // Implement friend request logic here
+        if (string.IsNullOrEmpty(currentPlayerId) || isSelfView) return;
+        
+        if (addFriendButton != null) addFriendButton.interactable = false;
+        
+        BackendAuthService.Instance.LikeProfile(currentPlayerId, (success, response) => 
+        {
+            if (success && response != null)
+            {
+                if (playerLikesText != null) playerLikesText.text = response.likesReceived.ToString();
+                if (addFriendButton != null) addFriendButton.interactable = !response.alreadyLiked;
+            }
+            else
+            {
+                if (addFriendButton != null) addFriendButton.interactable = true; // Re-enable on failure
+                Debug.LogWarning("Failed to like profile");
+            }
+        });
     }
 
     private void OnBackButtonClicked()

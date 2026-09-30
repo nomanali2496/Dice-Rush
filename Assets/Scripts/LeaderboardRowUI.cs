@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using EnhancedUI.EnhancedScroller;
+using UnityEngine.EventSystems;
 
 /// <summary>
 /// Data class to hold leaderboard row information
@@ -9,6 +10,7 @@ using EnhancedUI.EnhancedScroller;
 [System.Serializable]
 public class LeaderboardRowData
 {
+    public string userId;
     public int position;
     public string username;
     public int score;
@@ -16,8 +18,9 @@ public class LeaderboardRowData
     public bool isCustom;
     public string avatarKey; // URL or preset key from backend
     
-    public LeaderboardRowData(int position, string username, int score, Sprite avatarSprite = null, bool isCustom = false, string avatarKey = "")
+    public LeaderboardRowData(string userId, int position, string username, int score, Sprite avatarSprite = null, bool isCustom = false, string avatarKey = "")
     {
+        this.userId = userId;
         this.position = position;
         this.username = username;
         this.score = score;
@@ -32,7 +35,7 @@ public class LeaderboardRowData
 /// Handles different visual styles for top 3 positions (1st, 2nd, 3rd) and normal rows
 /// Works with Enhanced Scroller for efficient scrolling
 /// </summary>
-public class LeaderboardRowUI : EnhancedScrollerCellView
+public class LeaderboardRowUI : EnhancedScrollerCellView, IPointerClickHandler
 {
     [Header("Background Images")]
     [SerializeField] private Image rowBackground; // Main row background image
@@ -181,6 +184,17 @@ public class LeaderboardRowUI : EnhancedScrollerCellView
         
         // Setup arrow image (only for 1st place)
         SetupArrowImage(position);
+    }
+
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        if (currentData != null && !string.IsNullOrEmpty(currentData.userId))
+        {
+            if (ProfilePanelUI.Instance != null)
+            {
+                ProfilePanelUI.Instance.OpenPublicProfile(currentData.userId);
+            }
+        }
     }
     
     /// <summary>

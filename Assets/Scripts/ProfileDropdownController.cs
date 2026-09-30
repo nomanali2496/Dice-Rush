@@ -10,12 +10,14 @@ namespace UI
     [System.Serializable]
     public class ProfileItemData
     {
+        public string userId;
         public string username;
         public int score;
         public Sprite avatarSprite;
 
-        public ProfileItemData(string name, int scoreValue, Sprite avatar = null)
+        public ProfileItemData(string id, string name, int scoreValue, Sprite avatar = null)
         {
+            userId = id;
             username = name;
             score = scoreValue;
             avatarSprite = avatar;
@@ -74,9 +76,9 @@ namespace UI
         [Header("Sample Data (Used if Offline / Testing)")]
         [SerializeField] private List<ProfileItemData> sampleProfiles = new List<ProfileItemData>()
         {
-            new ProfileItemData("Omega Shenron", 1000),
-            new ProfileItemData("Muhammad Usama", 700),
-            new ProfileItemData("Noman Ali", 900)
+            new ProfileItemData("", "Omega Shenron", 1000),
+            new ProfileItemData("", "Muhammad Usama", 700),
+            new ProfileItemData("", "Noman Ali", 900)
         };
 
         private bool isExpanded = false;
@@ -183,7 +185,7 @@ namespace UI
                 }
                 else
                 {
-                    dynamicList.Add(new ProfileItemData("Player " + (i + 1), Random.Range(100, 1000)));
+                    dynamicList.Add(new ProfileItemData("", "Player " + (i + 1), Random.Range(100, 1000)));
                 }
             }
             return dynamicList;
@@ -208,7 +210,7 @@ namespace UI
                         if (i < response.leaderboard.Count)
                         {
                             var item = response.leaderboard[i];
-                            backendData.Add(new ProfileItemData(item.name, item.wins));
+                            backendData.Add(new ProfileItemData(item.userId, item.name, item.wins));
                         }
                         else
                         {
@@ -219,7 +221,7 @@ namespace UI
                             }
                             else
                             {
-                                backendData.Add(new ProfileItemData("Player " + (i + 1), Random.Range(100, 1000)));
+                                backendData.Add(new ProfileItemData("dummy_id", "Player " + (i + 1), Random.Range(100, 1000)));
                             }
                         }
                     }
@@ -250,6 +252,15 @@ namespace UI
             {
                 GameObject rowObj = Instantiate(profileRowPrefab, itemsContainer, false);
                 spawnedRowObjects.Add(rowObj);
+
+                Button rowButton = rowObj.GetComponent<Button>();
+                if (rowButton == null) rowButton = rowObj.AddComponent<Button>();
+                rowButton.onClick.AddListener(() => {
+                    if (ProfilePanelUI.Instance != null && !string.IsNullOrEmpty(profile.userId))
+                    {
+                        ProfilePanelUI.Instance.OpenPublicProfile(profile.userId);
+                    }
+                });
 
                 // Try binding via ProfileDropdownRowUI script
                 ProfileDropdownRowUI rowUI = rowObj.GetComponent<ProfileDropdownRowUI>();

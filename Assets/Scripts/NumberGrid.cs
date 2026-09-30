@@ -937,9 +937,26 @@ public class NumberGrid : MonoBehaviour
         else
         {
             // Fallback for offline/network testing
-            if (!boxData.isSelected)
+            bool isCorrect = (currentDiceSumPlayer > 0 && boxData.number == currentDiceSumPlayer);
+            
+            if (isCorrect)
             {
-                PerformLocalBoxLock(boxData, PlayerType.Player);
+                if (!boxData.isSelected)
+                {
+                    PerformLocalBoxLock(boxData, PlayerType.Player);
+                }
+            }
+            else
+            {
+                // Simulate wrong tap
+                GameObject targetObj = boxData.boxObject;
+                OnWrongBoxSelected?.Invoke(this, boxData.number, targetObj);
+                
+                // Re-enable select button
+                if (boxData.selectButton != null)
+                {
+                    boxData.selectButton.interactable = true;
+                }
             }
         }
     }

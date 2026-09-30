@@ -256,7 +256,7 @@ public class LeaderboardManager : MonoBehaviour, IEnhancedScrollerDelegate
                 }
             }
 
-            LeaderboardRowData data = new LeaderboardRowData(position, username, score, avatarSprite, isRowCustom, avatarKey);
+            LeaderboardRowData data = new LeaderboardRowData(item.userId, position, username, score, avatarSprite, isRowCustom, avatarKey);
             _leaderboardData.Add(data);
 
             if (item.userId == PlayerModel.Id || username == loggedInUsername)
@@ -294,7 +294,7 @@ public class LeaderboardManager : MonoBehaviour, IEnhancedScrollerDelegate
                 }
             }
 
-            _userData = new LeaderboardRowData(userPos, userName, userScore, userAvatarSprite, userCustom, userAvatarKey);
+            _userData = new LeaderboardRowData(PlayerModel.Id, userPos, userName, userScore, userAvatarSprite, userCustom, userAvatarKey);
         }
 
         // 3. Update the UI
@@ -498,7 +498,7 @@ public class LeaderboardManager : MonoBehaviour, IEnhancedScrollerDelegate
                 avatar = testAvatars[random.Next(0, testAvatars.Length)];
             }
             
-            LeaderboardRowData data = new LeaderboardRowData(position, username, score, avatar, isRowCustom);
+            LeaderboardRowData data = new LeaderboardRowData(username, position, username, score, avatar, isRowCustom);
             _leaderboardData.Add(data);
             if (username == loggedInUsername) _userData = data;
         }
@@ -860,7 +860,7 @@ public class LeaderboardManager : MonoBehaviour, IEnhancedScrollerDelegate
     {
         if (_leaderboardData == null) _leaderboardData = new SmallList<LeaderboardRowData>();
         int position = _leaderboardData.Count + 1;
-        _leaderboardData.Add(new LeaderboardRowData(position, username, score, avatar, isCustom));
+        _leaderboardData.Add(new LeaderboardRowData(username, position, username, score, avatar, isCustom));
         SortAndUpdatePositions();
         RebuildFilteredIndices();
         UpdateTop3Avatars();

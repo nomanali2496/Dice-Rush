@@ -653,7 +653,21 @@ public class BackendAuthService : MonoBehaviour
     {
         if (!HasStoredJWT())
         {
-            onComplete?.Invoke(false, "No stored JWT found.");
+            // Offline fallback: Update locally
+            string finalName = !string.IsNullOrEmpty(newName) ? newName : PlayerModel.Name;
+            string finalAvatar = !string.IsNullOrEmpty(avatar) ? avatar : PlayerModel.Avatar;
+            if (!string.IsNullOrEmpty(frame)) PlayerModel.SetProfileFrame(frame);
+            
+            // Force local event
+            PlayerModel.UpdateData(
+                PlayerModel.Id, finalName, PlayerModel.Email,
+                PlayerModel.Wins, PlayerModel.Losses, PlayerModel.Balance,
+                PlayerModel.CashBalance, PlayerModel.BonusBalance, PlayerModel.WinningBalance,
+                PlayerModel.Coins, finalAvatar, PlayerModel.Xp,
+                PlayerModel.Level, "user"
+            );
+            
+            onComplete?.Invoke(true, "Offline Fallback: Profile updated locally.");
             return;
         }
         Debug.Log($"<color=#00ffff>[BackendAuthService] PATCH Request: /api/auth/profile | Name: {newName}, Avatar: {avatar}, Frame: {frame}</color>");
@@ -662,6 +676,19 @@ public class BackendAuthService : MonoBehaviour
 
     private IEnumerator UpdateProfileCoroutine(string newName, string avatar, string frame, Action<bool, string> onComplete)
     {
+        // Optimistic UI Update (Useful for offline testing or instant UI feedback)
+        string finalName = !string.IsNullOrEmpty(newName) ? newName : PlayerModel.Name;
+        string finalAvatar = !string.IsNullOrEmpty(avatar) ? avatar : PlayerModel.Avatar;
+        if (!string.IsNullOrEmpty(frame)) PlayerModel.SetProfileFrame(frame);
+        
+        PlayerModel.UpdateData(
+            PlayerModel.Id, finalName, PlayerModel.Email,
+            PlayerModel.Wins, PlayerModel.Losses, PlayerModel.Balance,
+            PlayerModel.CashBalance, PlayerModel.BonusBalance, PlayerModel.WinningBalance,
+            PlayerModel.Coins, finalAvatar, PlayerModel.Xp,
+            PlayerModel.Level, "user"
+        );
+
         string url = baseUrl.TrimEnd('/') + "/api/auth/profile"; 
         string token = GetStoredJWT();
         
@@ -1949,6 +1976,7 @@ public class BackendAuthService : MonoBehaviour
         public int likesReceived;
         public int rank;
         public string memberSince;
+        public bool alreadyLiked;
     }
 
     [Serializable]
